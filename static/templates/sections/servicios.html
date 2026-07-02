@@ -1,0 +1,47 @@
+<div class="animate-hx-fade-in">
+    <div class="text-center mb-phi-3 md:mb-phi-4">
+        <h2 class="font-heading text-phi-2 md:text-phi-3 font-bold text-brand-dark leading-[1.1]">
+            {{ section_title }}
+        </h2>
+        <div class="w-[61.8%] md:w-[38.2%] h-0.5 bg-brand/30 mx-auto mt-4 mb-4"></div>
+        <p class="text-brand-dark/70 text-base md:text-phi-base max-w-[61.8%] mx-auto">
+            {{ section_desc }}
+        </p>
+    </div>
+
+    <div class="space-y-phi-2">
+        {% for doc in documentos %}
+        <div class="group relative flex flex-col {% if loop.index is odd %}md:flex-row{% else %}md:flex-row-reverse{% endif %}
+                    gap-phi md:gap-phi-2
+                    bg-white/60 backdrop-blur-sm rounded-2xl p-phi md:p-phi-3
+                    border border-brand/5 shadow-sm
+                    transition-all duration-500 ease-out
+                    hover:shadow-xl hover:border-brand/20 hover:bg-white/80 hover:-translate-y-1
+                    cursor-pointer">
+            {% if doc.imagen %}
+            <div class="md:w-[38.2%] overflow-hidden rounded-xl">
+                <img src="{{ doc.imagen }}" alt="{{ doc.titulo }}"
+                     class="w-full h-48 md:h-56 object-cover rounded-xl
+                            transition-all duration-500 ease-out
+                            group-hover:scale-105 group-hover:rotate-1
+                            hover:scale-110 hover:rotate-2">
+            </div>
+            {% endif %}
+            <div class="{% if doc.imagen %}md:w-[61.8%]{% else %}w-full{% endif %} flex flex-col justify-center">
+                <h3 class="font-heading text-phi-1 font-semibold text-brand-dark mb-2
+                           transition-all duration-500
+                           group-hover:text-brand
+                           group-hover:translate-x-1">
+                    {{ doc.titulo }}
+                </h3>
+                <p class="text-brand-dark/60 text-sm leading-[1.618]
+                          transition-all duration-500
+                          group-hover:text-brand-dark/80
+                          group-hover:translate-x-1">
+                    {{ doc.descripcion }}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

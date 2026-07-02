@@ -1,0 +1,32 @@
+<div class="animate-hx-fade-in">
+    <h2 class="font-heading text-phi-2 font-bold text-brand-dark mb-phi">Perfil</h2>
+
+    {% if user %}
+    <div class="flex items-center gap-4 mb-phi">
+        {% if user.avatar %}
+        <img src="{{ user.avatar }}" alt="{{ user.nombre }}"
+             class="w-16 h-16 rounded-full object-cover border-2 border-brand/20">
+        {% else %}
+        <div class="w-16 h-16 rounded-full bg-brand/10 flex items-center justify-center
+                    border-2 border-brand/20">
+            <span class="text-brand font-heading font-bold text-xl">
+                {{ user.nombre[0] | upper if user.nombre else "?" }}
+            </span>
+        </div>
+        {% endif %}
+        <div>
+            <h3 class="font-heading text-lg font-semibold text-brand-dark">{{ user.nombre }}</h3>
+            <p class="text-sm text-brand-dark/60">{{ user.email }}</p>
+            {% if user.miembros_desde %}
+            <p class="text-xs text-brand-dark/40 mt-1">Miembro desde {{ user.miembros_desde }}</p>
+            {% endif %}
+        </div>
+    </div>
+    {% else %}
+    <p class="text-brand-dark/60">Inicia sesión para ver tu perfil.</p>
+    <a href="#" class="mt-4 inline-block bg-brand text-white px-6 py-2 rounded-full text-sm font-semibold
+                       hover:bg-brand-dark transition-colors">
+        Iniciar sesión
+    </a>
+    {% endif %}
+</div>

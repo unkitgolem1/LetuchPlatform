@@ -1,0 +1,95 @@
+<div class="animate-hx-fade-in">
+    <div class="text-center mb-phi-3 md:mb-phi-4">
+        <h2 class="font-heading text-phi-2 md:text-phi-3 font-bold text-brand-dark leading-[1.1]">
+            {{ section_title }}
+        </h2>
+        <div class="w-[61.8%] md:w-[38.2%] h-0.5 bg-brand/30 mx-auto mt-4 mb-4"></div>
+        <p class="text-brand-dark/70 text-base md:text-phi-base max-w-[61.8%] mx-auto">
+            {{ section_desc }}
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-phi md:gap-phi-2">
+        {% for item in productos %}
+        <div class="group flex flex-col bg-white/60 backdrop-blur-sm rounded-2xl
+                    border border-brand/5 shadow-sm
+                    hover:shadow-md hover:-translate-y-1
+                    transition-all duration-300 overflow-hidden">
+            {% if item.imagen %}
+            <div class="relative overflow-hidden">
+                <img src="{{ item.imagen }}" alt="{{ item.titulo }}"
+                     class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500">
+                {% if item.cantidad <= 0 %}
+                <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px] flex items-center justify-center">
+                    <span class="font-heading text-sm font-bold text-white tracking-widest uppercase">Agotado</span>
+                </div>
+                {% endif %}
+            </div>
+            {% else %}
+            <div class="w-full h-44 bg-brand/5 flex items-center justify-center relative">
+                <span class="text-brand/30 font-heading text-phi-2">{{ loop.index }}</span>
+                {% if item.cantidad <= 0 %}
+                <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px] flex items-center justify-center">
+                    <span class="font-heading text-sm font-bold text-white tracking-widest uppercase">Agotado</span>
+                </div>
+                {% endif %}
+            </div>
+            {% endif %}
+            <div class="flex flex-col flex-1 p-phi md:p-phi-2">
+                <div class="flex items-start justify-between gap-2 mb-1">
+                    <h3 class="font-heading text-phi-1 font-semibold text-brand-dark">
+                        {{ item.titulo }}
+                    </h3>
+                    {% if item.cantidad > 0 %}
+                    <span class="shrink-0 text-[10px] font-medium text-brand-dark/40 px-2 py-0.5 bg-brand/5 rounded-full mt-1">
+                        {{ item.cantidad }} disp.
+                    </span>
+                    {% endif %}
+                </div>
+                <p class="text-brand-dark/60 text-sm leading-[1.618] mb-3 flex-1">
+                    {{ item.descripcion }}
+                </p>
+                <div class="flex flex-col gap-3 pt-3 border-t border-brand/10">
+                    <div class="flex items-center justify-between">
+                        <span class="font-heading text-lg font-bold text-brand">
+                            S/ {{ "%.2f"|format(item.precio) }}
+                        </span>
+                        <div x-data="{ qty: 1 }" class="flex items-center gap-1.5
+                                    {% if item.cantidad <= 0 %}opacity-40 pointer-events-none{% endif %}">
+                            <button @click="qty = Math.max(1, qty - 1); $el.nextElementSibling.value = qty"
+                                    class="w-7 h-7 flex items-center justify-center
+                                           text-sm font-medium rounded-full
+                                           border border-brand/20 text-brand-dark/70
+                                           hover:bg-brand hover:text-white hover:border-brand
+                                           transition-all duration-200 active:scale-90">−</button>
+                            <span x-text="qty" class="w-6 text-center text-sm font-semibold text-brand-dark">1</span>
+                            <button @click="qty = Math.min(99, qty + 1); $el.previousElementSibling.previousElementSibling.value = qty"
+                                    class="w-7 h-7 flex items-center justify-center
+                                           text-sm font-medium rounded-full
+                                           border border-brand/20 text-brand-dark/70
+                                           hover:bg-brand hover:text-white hover:border-brand
+                                           transition-all duration-200 active:scale-90">+</button>
+                            <input type="hidden" :value="qty" id="qty-input-{{ item.id }}">
+                        </div>
+                    </div>
+                    <button hx-post="/carrito_db"
+                            hx-vals='js:{id:"{{ item.id }}",cantidad:parseInt(document.getElementById("qty-input-{{ item.id }}").value)}'
+                            hx-target="#modal-body"
+                            hx-swap="innerHTML"
+                            hx-on::after-request="window.dispatchEvent(new CustomEvent('open-modal'))"
+                            class="w-full text-xs font-heading font-semibold px-4 py-2.5 rounded-full
+                                   transition-all duration-200 active:scale-[0.97]
+                                   {% if item.cantidad > 0 %}
+                                   bg-brand text-white hover:bg-brand-dark
+                                   {% else %}
+                                   bg-brand/20 text-brand-dark/30 cursor-not-allowed
+                                   {% endif %}"
+                            {% if item.cantidad <= 0 %}disabled{% endif %}>
+                        {% if item.cantidad > 0 %}Agregar{% else %}Agotado{% endif %}
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

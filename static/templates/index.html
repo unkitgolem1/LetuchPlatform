@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+
+{% block title %}LetuchWebSite | Inicio{% endblock %}
+
+{% block content %}
+
+<!-- ═══════════════════════════════════════════
+     HERO — Full viewport, brand green
+     ═══════════════════════════════════════════ -->
+<section id="hero"
+         class="relative h-screen w-full bg-brand flex items-center justify-center overflow-hidden">
+
+    <!-- ─── Suelo de plantas con viento (Alpine.js) ─── -->
+    <div class="absolute bottom-0 left-0 right-0 flex justify-center z-0 pointer-events-none overflow-hidden [contain:layout_style_paint]">
+        <div class="mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 xl:max-w-[1440px] flex items-end justify-around h-36 md:h-44">
+            <svg x-data="{ sway: 3 }" x-init="setInterval(() => $el.style.transform = 'rotate(' + (Math.sin(Date.now()/477) * sway) + 'deg)', 50)" style="transform-origin:bottom center" class="w-7 h-28 md:h-36" viewBox="0 0 14 60" fill="none">
+                <path x-init="let l=$el.getTotalLength();Object.assign($el.style,{strokeDasharray:l,strokeDashoffset:l});requestAnimationFrame(()=>{$el.style.transition='stroke-dashoffset 2s ease-out';$el.style.strokeDashoffset='0'})" d="M7,60 Q4,42 9,24 Q11,12 7,0" stroke="#7BC47F" stroke-width="1.2" fill="none"/>
+                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M7,36 Q13,31 14,36 Q13,41 7,36Z" fill="#7BC47F"/>
+                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M8,16 Q2,11 1,16 Q2,21 8,16Z" fill="#7BC47F"/>
+            </svg>
+            <svg x-data="{ sway: -2 }" x-init="setInterval(() => $el.style.transform = 'rotate(' + (Math.sin(Date.now()/477) * sway) + 'deg)', 50)" style="transform-origin:bottom center" class="w-7 h-24 md:h-32" viewBox="0 0 14 54" fill="none">
+                <path x-init="let l=$el.getTotalLength();Object.assign($el.style,{strokeDasharray:l,strokeDashoffset:l});requestAnimationFrame(()=>{$el.style.transition='stroke-dashoffset 2s ease-out';$el.style.strokeDashoffset='0'})" d="M7,54 Q10,38 4,22 Q2,12 7,0" stroke="#7BC47F" stroke-width="1.2" fill="none"/>
+                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M6,32 Q1,27 0,32 Q1,37 6,32Z" fill="#7BC47F"/>
+            </svg>
+            <svg x-data="{ sway: -1 }" x-init="setInterval(() => $el.style.transform = 'rotate(' + (Math.sin(Date.now()/477) * sway) + 'deg)', 50)" style="transform-origin:bottom center" class="w-7 h-36 md:h-44" viewBox="0 0 14 66" fill="none">
+                <path x-init="let l=$el.getTotalLength();Object.assign($el.style,{strokeDasharray:l,strokeDashoffset:l});requestAnimationFrame(()=>{$el.style.transition='stroke-dashoffset 2s ease-out';$el.style.strokeDashoffset='0'})" d="M7,66 Q4,48 10,30 Q12,16 7,0" stroke="#7BC47F" stroke-width="1.2" fill="none"/>
+                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M7,44 Q13,39 14,44 Q13,49 7,44Z" fill="#7BC47F"/>
+                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M8,22 Q2,17 1,22 Q2,27 8,22Z" fill="#7BC47F"/>
+            </svg>
+            <svg x-data="{ sway: 2 }" x-init="setInterval(() => $el.style.transform = 'rotate(' + (Math.sin(Date.now()/477) * sway) + 'deg)', 50)" style="transform-origin:bottom center" class="w-7 h-28 md:h-36" viewBox="0 0 14 56" fill="none">
+                <path x-init="let l=$el.getTotalLength();Object.assign($el.style,{strokeDasharray:l,strokeDashoffset:l});requestAnimationFrame(()=>{$el.style.transition='stroke-dashoffset 2s ease-out';$el.style.strokeDashoffset='0'})" d="M7,56 Q10,40 4,24 Q2,14 7,0" stroke="#7BC47F" stroke-width="1.2" fill="none"/>
+                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M8,36 Q13,31 14,36 Q13,41 8,36Z" fill="#7BC47F"/>
+            </svg>
+            <svg x-data="{ sway: -3 }" x-init="setInterval(() => $el.style.transform = 'rotate(' + (Math.sin(Date.now()/477) * sway) + 'deg)', 50)" style="transform-origin:bottom center" class="w-7 h-32 md:h-40" viewBox="0 0 14 62" fill="none">
+                <path x-init="let l=$el.getTotalLength();Object.assign($el.style,{strokeDasharray:l,strokeDashoffset:l});requestAnimationFrame(()=>{$el.style.transition='stroke-dashoffset 2s ease-out';$el.style.strokeDashoffset='0'})" d="M7,62 Q4,44 10,26 Q12,14 7,0" stroke="#7BC47F" stroke-width="1.2" fill="none"/>
+                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M6,38 Q1,33 0,38 Q1,43 6,38Z" fill="#7BC47F"/>
+                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M8,18 Q14,13 15,18 Q14,23 8,18Z" fill="#7BC47F"/>
+            </svg>
+            <svg x-data="{ sway: 1 }" x-init="setInterval(() => $el.style.transform = 'rotate(' + (Math.sin(Date.now()/477) * sway) + 'deg)', 50)" style="transform-origin:bottom center" class="w-7 h-24 md:h-32" viewBox="0 0 14 50" fill="none">
+                <path x-init="let l=$el.getTotalLength();Object.assign($el.style,{strokeDasharray:l,strokeDashoffset:l});requestAnimationFrame(()=>{$el.style.transition='stroke-dashoffset 2s ease-out';$el.style.strokeDashoffset='0'})" d="M7,50 Q10,36 4,20 Q2,10 7,0" stroke="#7BC47F" stroke-width="1.2" fill="none"/>
+                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M7,30 Q13,25 14,30 Q13,35 7,30Z" fill="#7BC47F"/>
+            </svg>
+        </div>
+    </div>
+
+    <div class="mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 xl:max-w-[1440px] text-center z-10">
+
+        <h1 class="font-heading text-[clamp(2rem,10vw,6rem)] leading-[1.1] text-white animate-fade-in">
+            Letuch
+        </h1>
+
+        <p class="mt-4 text-base md:text-phi-1 text-white/85 max-w-[61.8%] mx-auto
+                  animate-slide-up">
+            Tu negocio, nuestro compromiso, Pan Artesanal a la mesa. 
+        </p>
+
+        <div class="mt-10 md:mt-phi-3 flex justify-center animate-fade-in">
+            <a href="#content"
+               hx-get="/section/inicio"
+               hx-target="#content-area"
+               hx-swap="innerHTML"
+               class="inline-block border-2 border-white text-white
+                      px-8 py-3 rounded-full
+                      text-sm md:text-base
+                      font-heading font-semibold
+                      hover:bg-white hover:text-brand
+                      transition-all duration-300
+                      active:scale-[0.97]">
+                Explorar
+            </a>
+        </div>
+    </div>
+
+    <!-- Indicador scroll -->
+    <div class="absolute bottom-[38.2%] left-0 right-0 flex justify-center pointer-events-none">
+        <div class="animate-bounce">
+            <svg class="w-6 h-6 md:w-8 md:h-8 text-white/60" fill="none" stroke="currentColor"
+                 viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Degradado suave hacia el navbar -->
+    <div class="absolute bottom-0 left-0 right-0 h-20 md:h-28
+                bg-gradient-to-b from-transparent to-brand pointer-events-none"></div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     NAVBAR — Sticky debajo del Hero, mismo verde
+     ═══════════════════════════════════════════ -->
+<nav x-data="{ active: location.pathname === '/' ? 'inicio' : location.pathname.replace('/section/','') || 'inicio', menuOpen: false, cartCount: 0 }"
+     @scroll.window="$el.classList.toggle('shadow-lg', window.scrollY > 80)"
+     @htmx:after-swap.window="if($event.detail.target && $event.detail.target.id==='modal-body'){const c=$event.detail.target.querySelector('.space-y-phi');cartCount=c?c.children.length:0}"
+     class="sticky top-0 w-full bg-brand z-50 shadow-[0_2px_20px_rgba(87,152,79,0.3)]">
+
+    <div class="mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 xl:max-w-[1440px]">
+        <div class="grid grid-cols-3 items-center h-14 md:h-16">
+
+            <!-- Left — Logo -->
+            <a href="/"
+               class="font-heading text-white font-bold text-phi-1 tracking-tight
+                      justify-self-start hover:opacity-90 transition-opacity">
+                Letuch
+            </a>
+
+            <!-- Center — Nav links desktop -->
+            <ul class="hidden md:flex justify-center gap-1">
+                <li><a href="#" @click="active='inicio'" :class="'block px-5 py-2 text-sm font-medium rounded-full transition-all ' + (active==='inicio' ? 'text-white bg-white/15 font-semibold' : 'text-white/80 hover:text-white hover:bg-white/10')" hx-get="/section/inicio" hx-target="#content-area" hx-swap="innerHTML" hx-push-url="true">Inicio</a></li>
+                <li><a href="#" @click="active='servicios'" :class="'block px-5 py-2 text-sm font-medium rounded-full transition-all ' + (active==='servicios' ? 'text-white bg-white/15 font-semibold' : 'text-white/80 hover:text-white hover:bg-white/10')" hx-get="/section/servicios" hx-target="#content-area" hx-swap="innerHTML" hx-push-url="true">Servicios</a></li>
+                <li><a href="#" @click="active='contacto'" :class="'block px-5 py-2 text-sm font-medium rounded-full transition-all ' + (active==='contacto' ? 'text-white bg-white/15 font-semibold' : 'text-white/80 hover:text-white hover:bg-white/10')" hx-get="/section/contacto" hx-target="#content-area" hx-swap="innerHTML" hx-push-url="true">Contacto</a></li>
+            </ul>
+
+            <!-- Right — Perfil / Carrito + menú móvil -->
+            <div class="justify-self-end flex items-center gap-1 md:gap-2">
+
+                <button hx-get="/perfil" hx-target="#modal-body" hx-swap="innerHTML" hx-on::after-request="window.dispatchEvent(new CustomEvent('open-modal'))"
+                        class="text-white/80 hover:text-white p-2 rounded-full hover:bg-white/10 transition-all duration-200" aria-label="Perfil">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                    </svg>
+                </button>
+
+                <button hx-get="/carrito" hx-target="#modal-body" hx-swap="innerHTML" hx-on::after-request="window.dispatchEvent(new CustomEvent('open-modal'))"
+                        class="text-white/80 hover:text-white p-2 rounded-full hover:bg-white/10 transition-all duration-200 relative" aria-label="Carrito">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/>
+                    </svg>
+                    <span x-show="cartCount > 0" x-text="cartCount"
+                          class="absolute -top-0.5 -right-0.5 w-4.5 h-4.5 bg-amber-400 text-white text-[9px] font-bold flex items-center justify-center rounded-full shadow-sm">0</span>
+                </button>
+
+                <!-- Menú móvil hamburguesa -->
+                <button @click="menuOpen = !menuOpen"
+                        class="md:hidden text-white p-2 hover:bg-brand-dark rounded-lg transition-colors duration-200"
+                        aria-label="Abrir menú">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Menú móvil desplegable -->
+    <div x-show="menuOpen" @click.away="menuOpen = false"
+         class="md:hidden border-t border-brand-dark/50 bg-brand-dark/95 backdrop-blur-sm">
+        <ul class="mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 xl:max-w-[1440px] py-2 space-y-1">
+            <li><a href="#" @click="active='inicio'; menuOpen=false" :class="'block px-4 py-2 text-sm font-medium rounded-lg transition-all ' + (active==='inicio' ? 'text-white bg-white/15 font-semibold' : 'text-white/80 hover:text-white hover:bg-white/10')" hx-get="/section/inicio" hx-target="#content-area" hx-swap="innerHTML" hx-push-url="true">Inicio</a></li>
+            <li><a href="#" @click="active='servicios'; menuOpen=false" :class="'block px-4 py-2 text-sm font-medium rounded-lg transition-all ' + (active==='servicios' ? 'text-white bg-white/15 font-semibold' : 'text-white/80 hover:text-white hover:bg-white/10')" hx-get="/section/servicios" hx-target="#content-area" hx-swap="innerHTML" hx-push-url="true">Servicios</a></li>
+            <li><a href="#" @click="active='contacto'; menuOpen=false" :class="'block px-4 py-2 text-sm font-medium rounded-lg transition-all ' + (active==='contacto' ? 'text-white bg-white/15 font-semibold' : 'text-white/80 hover:text-white hover:bg-white/10')" hx-get="/section/contacto" hx-target="#content-area" hx-swap="innerHTML" hx-push-url="true">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════
+     CONTENIDO DINÁMICO — Cargado por HTMX
+     ═══════════════════════════════════════════ -->
+<section id="content"
+         class="w-full py-phi-3 md:py-phi-4">
+
+    <div class="mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 xl:max-w-[1440px]">
+        <div id="content-area"
+             class="min-h-[50vh] bg-[rgba(0,0,0,0.015)] rounded-xl shadow-[inset_4px_4px_12px_rgba(0,0,0,0.05),inset_-4px_-4px_12px_rgba(255,255,255,0.7)] transition-shadow duration-300 p-phi md:p-phi-2"
+             hx-get="/section/inicio"
+             hx-trigger="load"
+             hx-swap="innerHTML">
+            {% block page_content %}
+            <!-- Cargando... -->
+            <div class="flex items-center justify-center py-phi-5">
+                <div class="w-8 h-8 border-4 border-brand/30 border-t-brand
+                            rounded-full animate-spin"></div>
+            </div>
+            {% endblock %}
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════ -->
+<footer class="w-full border-t border-brand/10 py-phi-2 md:py-phi-3">
+    <div class="mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 xl:max-w-[1440px] text-center text-brand-dark/60 text-sm">
+        <p>&copy; {{ now().year if now is defined else "2026" }} LetuchWebSite. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+{% endblock %}
+
+

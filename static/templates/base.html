@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}LetuchWebSite{% endblock %}</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="{{ url_for('static', path='js/tailwind-config.js') }}"></script>
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.typekit.net/fbd7suu.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="bg-false-white min-h-screen font-sans antialiased leading-[1.618]">
+
+    {% block content %}{% endblock %}
+
+    <!-- ─── Modal global (perfil / carrito) ─── -->
+    <div x-data="{ open: false }"
+         x-on:open-modal.window="open = true"
+         x-on:close-modal.window="open = false"
+         x-show="open"
+         class="fixed inset-0 z-50">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" @click="open = false"></div>
+        <div class="relative z-10 flex items-center justify-center min-h-screen p-4">
+            <div class="relative bg-false-white rounded-2xl shadow-xl
+                        max-w-lg w-full max-h-[80vh] overflow-y-auto
+                        border border-brand/10">
+                <button @click="open = false"
+                        class="absolute top-3 right-3 z-20 w-8 h-8 flex items-center justify-center
+                               text-brand-dark/50 hover:text-brand-dark hover:bg-brand/5 rounded-full
+                               transition-colors text-xl leading-none">&times;</button>
+                <div id="modal-body" class="p-phi md:p-phi-2"></div>
+            </div>
+        </div>
+    </div>
+
+    {% block extra_scripts %}{% endblock %}
+
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') window.dispatchEvent(new CustomEvent('close-modal'));
+        });
+    </script>
+</body>
+</html>

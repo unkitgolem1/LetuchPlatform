@@ -1,0 +1,80 @@
+<div class="animate-hx-fade-in">
+    <div class="flex items-center justify-between mb-phi">
+        <h2 class="font-heading text-phi-2 font-bold text-brand-dark">Carrito</h2>
+        <span class="text-xs text-brand-dark/40">
+            {{ items|length }} {{ 'producto' if items|length == 1 else 'productos' }}
+        </span>
+    </div>
+
+    {% if items and items|length > 0 %}
+    <div class="space-y-phi">
+        {% for item in items %}
+        <div class="flex items-center gap-3 pb-phi border-b border-brand/10 last:border-0">
+            {% if item.imagen %}
+            <img src="{{ item.imagen }}" alt="{{ item.titulo }}"
+                 class="w-14 h-14 rounded-xl object-cover shrink-0">
+            {% endif %}
+            <div class="flex-1 min-w-0">
+                <h3 class="font-heading text-sm font-semibold text-brand-dark truncate">{{ item.titulo }}</h3>
+                <p class="text-xs text-brand-dark/60 leading-relaxed">{{ item.descripcion }}</p>
+                <div class="flex items-center justify-between mt-2">
+                    <span class="text-sm font-semibold text-brand">S/ {{ "%.2f"|format(item.precio) }}</span>
+                    <div class="flex items-center gap-1.5">
+                        <button hx-post="/carrito_db"
+                                hx-vals='js:{id_item:"{{ item.id }}",accion:"restar"}'
+                                hx-target="#modal-body"
+                                hx-swap="innerHTML"
+                                class="w-6 h-6 flex items-center justify-center
+                                       text-xs font-semibold rounded-full
+                                       border border-brand/20 text-brand-dark/60
+                                       hover:bg-brand hover:text-white hover:border-brand
+                                       transition-all duration-200 active:scale-90">−</button>
+                        <span class="w-5 text-center text-xs font-semibold text-brand-dark">{{ item.cantidad }}</span>
+                        <button hx-post="/carrito_db"
+                                hx-vals='js:{id_item:"{{ item.id }}",accion:"sumar"}'
+                                hx-target="#modal-body"
+                                hx-swap="innerHTML"
+                                class="w-6 h-6 flex items-center justify-center
+                                       text-xs font-semibold rounded-full
+                                       border border-brand/20 text-brand-dark/60
+                                       hover:bg-brand hover:text-white hover:border-brand
+                                       transition-all duration-200 active:scale-90">+</button>
+                    </div>
+                </div>
+                <div class="text-[10px] text-brand-dark/30 text-right mt-0.5">
+                    S/ {{ "%.2f"|format(item.precio * item.cantidad) }}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="mt-phi pt-phi border-t border-brand/10 space-y-2">
+        <div class="flex items-center justify-between text-sm">
+            <span class="text-brand-dark/60">Subtotal</span>
+            <span class="font-semibold text-brand-dark">S/ {{ "%.2f"|format(total) }}</span>
+        </div>
+        <button hx-post="/carrito_db"
+                hx-vals='{"accion":"checkout"}'
+                hx-target="#modal-body"
+                hx-swap="innerHTML"
+                class="w-full bg-brand text-white font-heading font-semibold text-sm
+                       px-4 py-2.5 rounded-full
+                       hover:bg-brand-dark transition-all duration-200 active:scale-[0.97]">
+            Confirmar pedido
+        </button>
+    </div>
+    {% else %}
+    <div class="flex flex-col items-center justify-center py-phi-3 text-center">
+        <svg class="w-12 h-12 text-brand/20 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/>
+        </svg>
+        <p class="text-brand-dark/40 text-sm">Tu carrito está vacío.</p>
+        <button onclick="window.dispatchEvent(new CustomEvent('close-modal'))"
+                class="mt-3 text-xs font-heading font-semibold text-brand hover:text-brand-dark transition-colors">
+            Seguir comprando →
+        </button>
+    </div>
+    {% endif %}
+</div>
