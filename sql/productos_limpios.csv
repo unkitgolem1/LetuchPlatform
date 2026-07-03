@@ -1,0 +1,271 @@
+nombre,precio,descripcion,categoria
+MARIA BONITA,196,"Deliciosas tostadas francesas de pan brioche de la casa con azúcar y canela, miel maple, mermelada de fresa y plátano.",DESAYUNO-CENA
+ MUCHO CORAZON,187,"Con nuestro pan de la casa, acompañado de una mezcla de pollo dorado, cebolla caramelizada, hongos y queso Monterrey Jack.",DESAYUNO-CENA
+ADORO,183,"Con nuestro pan de la casa, acompañado de huevo revuelto con queso amarillo.",DESAYUNO-CENA
+LUNA DE MIEL,189,"Omellete de huevo acompañado de queso panela, champiñones y espinaca",DESAYUNO-CENA
+CAFE AMERICANO MAQUINA,59,"Americano de máquina, suave y reconfortante.",BEBIDAS CALIENTES
+CAFE CAPUCHINO,73,Capuchino cremoso con espuma de leche.,BEBIDAS CALIENTES
+CAFFE LATTE,69,"Latte sedoso, abrazo líquido matutino.",BEBIDAS CALIENTES
+JUGO DE NARANJA,75,"Jugo de naranja natural, sol líquido.",BEBIDAS FRIAS
+JUGO VERDE,75,"Jugo verde detox, pura energía vital.",BEBIDAS FRIAS
+BOLITAS DE QUESO,40,"Bolitas de queso, bocados dorados de felicidad.",PANADERIA DULCE
+CONCHAS BRIOCHE,40,"Conchas de brioche, suaves y cubiertas de dulce.",PANADERIA DULCE
+CHOCOLATINA,65,"Chocolatina artesanal, capas de chocolate.",PANADERIA DULCE
+ROL DE CANELA,55,"Rol de canela, espiral de dulce calidez.",PANADERIA DULCE
+ROL DE CANELA BRIOCHE,40,"Rol de canela brioche, esponjoso y canela.",PANADERIA DULCE
+CROISANT NATURAL,50,"Croissant natural, hojaldre y mantequilla.",PANADERIA DULCE
+ROL DE TOCINO QUESO DE BOLA,73,Rol salado de tocino y queso de bola.,PANADERIA DULCE
+BARRA BRIOCHE,139,"Barra brioche, suave y versátil.",PANADERIA SALADA
+BARRA INTEGRAL,127,"Barra integral, fibra y sabor.",PANADERIA SALADA
+BARRA MASA MADRE,159,"Barra masa madre, fermentación natural.",PANADERIA SALADA
+BAGUETTE,32,"Baguette clásica, corteza dorada y crujiente.",PANADERIA SALADA
+HOGAZA MASA MADRE,200,"Hogaza masa madre, rústica y artesanal.",PANADERIA SALADA
+HOGAZA SENCILLA,105,"Hogaza sencilla, pan de toda la vida.",PANADERIA SALADA
+Miel 600,75,"Miel pura de la selva, dulzura natural.",PRODUCTOS LOCALES
+Miel Selva dorada LITRO ,180,"Miel Selva Dorada, litro de oro líquido.",PRODUCTOS LOCALES
+MIEL SERVA DORADA 345 gr. ,75,"Miel Selva Dorada 345g, tesoro en frasco.",PRODUCTOS LOCALES
+SMOOTHIE TROPICAL,83,"Smoothie tropical, un paraíso en vaso.",BEBIDAS FRIAS
+SMOOTHIE FAROLITO,83,"Smoothie farolito, dulce y refrescante.",BEBIDAS FRIAS
+FRAPPE DE LA CASA,79,"Frappé de la casa, cremoso y helado.",BEBIDAS FRIAS
+PAN HAMBURGUESA HIGH SCORE,15,"Pan de hamburguesa High Score, esponjoso.",PANADERIA SALADA
+PAN BOLLO BRIOCHE HAMBURGUESA,18,"Bollo brioche para hamburguesa, suave.",PANADERIA SALADA
+PAN DE HAMBURGUESA ROMELIA,16,"Pan de hamburguesa Romelia, artesanal.",PANADERIA SALADA
+PAN FRIO,80,"Pan frío, suave y esponjoso.",PANADERIA DULCE
+AMORCITO CORAZON,185,"Amorcito corazón, desayuno con cariño.",DESAYUNO-CENA
+PASTEL ZANAHORIA,450,"Pastel de zanahoria, húmedo y especiado.",POSTRES
+REBANADA ZANAHORIA,65,"Rebanada de pastel de zanahoria, dulce y húmeda.",PANADERIA DULCE
+PAN JAMON Y QUESO,65,"Pan de jamón y queso, clásico irresistible.",PANADERIA DULCE
+DELIRIO HUEVO,198,"Delirio de huevo, sabor que enloquece.",DESAYUNO-CENA
+DELIRIO POLLO,233,"Delirio de pollo, irresistible.",DESAYUNO-CENA
+LECHE ALMENDRA,15,"Leche de almendra, suave y vegetal.",BEBIDAS FRIAS
+CAFE AMERICANO REFIL,59,"Americano de refil, el clásico que nunca falla.",BEBIDAS CALIENTES
+CAPUCHINO CON ALMENDRA,79,Capuchino con un sutil aroma a almendra.,BEBIDAS CALIENTES
+VELAS AROMITICA PEQUEÑA,160,"Vela aromática pequeña, luz y perfume.",PRODUCTOS LOCALES
+DESODORANTE CREMA VEGANO ACATL FRASCO,110,"Desodorante crema vegano Acatl, fresco natural.",PRODUCTOS LOCALES
+MOKA,73,"Moka tentador, chocolate y café en perfecta armonía.",BEBIDAS CALIENTES
+AFFOGATTO,98,Affogato: espresso abrazando helado vainilla.,BEBIDAS CALIENTES
+COLD BREW,50,"Cold brew suave, extracción llena de sabor.",BEBIDAS FRIAS
+AMOR FUGAZ,187,"Pan de masa madre, queso crema, pepino, panela y hierbas",DESAYUNO-CENA
+BAGUETTE GOURMET,207,"Baguette gourmet, elegancia en pan.",DESAYUNO-CENA
+LATTE,75,"Latte frío, sedoso y refrescante.",BEBIDAS FRIAS
+HUEVOS BENEDICTINOS,198,"Huevos benedictinos, clásico sofisticado.",DESAYUNO-CENA
+ROL DE ARANDANO,49,"Rol de arándano, dulce y frutal.",PANADERIA DULCE
+JUGO FRUTOS ROJOS,75,"Jugo de frutos rojos, antioxidante y vibrante.",BEBIDAS FRIAS
+TARTA FRUTOS ROJOS,69,"Tarta de frutos rojos, color y frescura.",PANADERIA DULCE
+GALLETA CHISPAS,35,"Galleta con chispas de chocolate, crujiente y tierna.",PANADERIA DULCE
+MEDIA DOCENA DE MINI BAGUETTE,90,"Media docena de mini baguettes, para compartir.",PANADERIA SALADA
+MEDIA DOCENA DE CROISSANT MINI,120,"Media docena de croissants mini, bocados hojaldrados.",PANADERIA DULCE
+BAGUETTE LARGA,40,"Baguette larga, crujiente y artesanal.",PANADERIA SALADA
+LA MALAGUEÑA,235,"La malagueña, sabor que enamora.",DESAYUNO-CENA
+Pastel choco,80,"Pastel de chocolate, tentación pura.",POSTRES
+CAMINO VERDE,219,"Camino verde, frescura y sabor.",DESAYUNO-CENA
+SEÑORA TENTACION,198,"Señora tentación, imposible resistirse.",DESAYUNO-CENA
+PANCAKES,179,"Pancakes esponjosos, montaña de dulzura.",DESAYUNO-CENA
+HUEVOS AL GUSTO,187,"Huevos al gusto, como tú los quieras.",DESAYUNO-CENA
+MATCHA LATTE,87,"Matcha latte vibrante, ceremonia en taza.",BEBIDAS CALIENTES
+CHAI LATTE VAINILLA,86,Chai latte especiado con un toque de vainilla.,BEBIDAS CALIENTES
+TARO LATTE,87,"Taro latte lila, dulce y cremoso.",BEBIDAS CALIENTES
+PASTA VEGETARIANA,179,"Pasta vegetariana, verduras y amor.",DESAYUNO-CENA
+PASTA ALFREDO,189,"Pasta alfredo, cremosa y reconfortante.",DESAYUNO-CENA
+ENSALADA DE LA CASA,159,"Ensalada de la casa, fresca y vibrante.",DESAYUNO-CENA
+CROISSANT DE ALMENDRA,69,"Croissant de almendra, hojaldre y crocante.",PANADERIA DULCE
+PAN DE GUAYABA,65,"Pan de guayaba, dulce tropical envuelto.",PANADERIA DULCE
+MUFFIN PLATANO,55,"Muffin de plátano, esponjoso y frutal.",PANADERIA DULCE
+CLASICO,173,"Clásico, el favorito de siempre.",DESAYUNO-CENA
+CRUFFIN DE NUTELLA,75,"Cruffin de Nutella, hojaldre y chocolate.",PANADERIA DULCE
+PAN BRIOCHE ROMELIA,100,"Pan brioche Romelia, esponjoso y dorado.",PANADERIA SALADA
+BUNDCAKE ALMENDRA,210,"Bundcake de almendra, denso y frutal.",POSTRES
+BABKA ,150,"Babka artesanal, trenza de dulzura.",POSTRES
+BAGUETTE LARGA,45,"Baguette larga, crujiente y artesanal.",PANADERIA SALADA
+CROISSANT NATURAL CHICO,35,"Croissant natural chico, pequeño bocado hojaldrado.",PANADERIA DULCE
+BABKA DE CHOCOLATE,149,"Babka de chocolate, cacao en espiral.",POSTRES
+BUNDCAKE ALMENDRA Y NARANJA,210,"Bundcake de almendra y naranja, cítrico y frutal.",POSTRES
+ROSCA  ALMENDRA/NUTELLA,400,Producto artesanal de la casa.,PAN DE TEMPORADA
+ROSCA REYES CLASICA 500GR,300,Rosca de Reyes clásica 500gr.,PAN DE TEMPORADA
+ROSCA REYES RELLENA DE Q. CREMA,650,Rosca de Reyes rellena de queso crema.,PAN DE TEMPORADA
+ROSCA REYES CLASICA,550,"Rosca de Reyes clásica, tradición.",PAN DE TEMPORADA
+ROSCA ENVINADA,380,"Rosca envinada, tradición con un toque.",PAN DE TEMPORADA
+ROSCA  REYES RELLENA NUTELLA,650,Producto artesanal de la casa.,PAN DE TEMPORADA
+ROSCA PETIT,120,"Rosca petit, pequeña y dulce.",PAN DE TEMPORADA
+TARTALETA AVELLANA PASTELERA,75,"Tartaleta de avellana, crema y crocante.",PANADERIA DULCE
+GALLETAS CHISPAS DE CHOCOLATE LOTUS,40,"Galletas con chispas Lotus, crujiente belga.",PRODUCTOS LOCALES
+BROWNIE,45,"Brownie denso y chocolatoso, pecado dulce.",PRODUCTOS LOCALES
+SEMILLAS DULCE,75,"Semillas dulces, crocantes y saludables.",PRODUCTOS LOCALES
+SEMILLAS SALADAS,35,"Semillas saladas, el snack perfecto.",PRODUCTOS LOCALES
+BAGUETTE BOURBON,207,"Baguette bourbon, audaz y ahumada.",DESAYUNO-CENA
+SHAMPOO SOLIDO VEGANO ACATL,140,"Shampoo sólido vegano Acatl, cabello feliz.",PRODUCTOS LOCALES
+BALSAMO LABIAL HIDRATANTE,85,"Bálsamo labial hidratante, suavidad natural.",PRODUCTOS LOCALES
+crema,85,"Crema artesanal, piel mimada.",PRODUCTOS LOCALES
+BRIOCHE ADOBADO,150,"Brioche adobado, especias y suavidad.",DESAYUNO-CENA
+cajita san valentin,250,"Cajita San Valentín, amor en capas.",POSTRES
+AGUA NATURAL,0,VASO CON AGUA O HIELO,BEBIDAS FRIAS
+VASO LECHE,40,"Vaso de leche, sencillez reconfortante.",BEBIDAS CALIENTES
+HAMBURGUESA ADOBADA,135,"Hamburguesa adobada, jugosa y especiada.",DESAYUNO-CENA
+PANQUE ELOTE MUFFIN,55,"Muffin de elote, tierno y dorado.",PANADERIA DULCE
+ESPRESSO DOBLE,60,"Doble espresso, puro y electrizante.",BEBIDAS CALIENTES
+PAN DE ZANAHORIA REDONDO,280,"Pan de zanahoria redondo, hogareño y dulce.",POSTRES
+SMOTHIE OREO,70,"Smoothie de Oreo, tentación cremosa.",BEBIDAS FRIAS
+MATCHA LATTE ALMENDRA,89,"Matcha latte con leche de almendra, frescura verde.",BEBIDAS CALIENTES
+BOLSA CAFE MOLIDO DE LA CASA LETUCH,220,CAFE MOLIDO DE LA CASA,PRODUCTOS LOCALES
+CRUTONES,25,CRUTONES DE PARMESANO CON ACEITE DE OLIVA,PANADERIA SALADA
+PUDIN CAJETA,45,"Pudín de cajeta, cremoso y caramelizado.",PANADERIA DULCE
+VASO CHOCOLATE,65,VASO DE CHOCOLATE FRIO O CALIENTE,BEBIDAS CALIENTES
+Crutones Grandes,40,"Crutones grandes, crocantes y dorados.",PANADERIA DULCE
+Granola,80,"Granola artesanal, crocante y natural.",POSTRES
+BOLSITA SEMILLAS,35,"Bolsita de semillas, energía para llevar.",PRODUCTOS LOCALES
+ANGELITOS NEGROS,83,"Angelitos negros, café frío con un toque celestial.",BEBIDAS FRIAS
+HUEVOS MOTULEÑOS,189,"Huevos motuleños, tradición y sabor.",DESAYUNO-CENA
+BOLSA PAN HAMBURGUESA,90,BOLLOS DE PAN PARA HMABURGUESA BRIOCHE,PANADERIA SALADA
+MUFFIN CANELA,35,"Muffin de canela, especiado y esponjoso.",PANADERIA DULCE
+VAINILLA ARTESANAL GRANDE,240,"Vainilla artesanal grande, aroma puro.",PRODUCTOS LOCALES
+HAMBURGUESA LETUCH,209,"Hamburguesa Letuch, la casa en cada mordida.",DESAYUNO-CENA
+FOCACCIA,50,"Focaccia dulce, esponjosa y aromática.",PANADERIA DULCE
+EXPRESSO DOBLE CORTADO,50,Expresso doble cortado con un toque de leche.,BEBIDAS CALIENTES
+PAN HOT-DOG,15,"Pan para hot-dog, suave y alargado.",PANADERIA SALADA
+BAGUETTE MASA MADRE,60,"Baguette masa madre, crocante natural.",PANADERIA SALADA
+ORDEN PAPAS FRANCESA,70,"Papas a la francesa, doradas y crujientes.",DESAYUNO-CENA
+LATTE DE AVELLANA,75,"Latte de avellana, dulzura tostada en cada sorbo.",BEBIDAS CALIENTES
+FRESAS CON CREMA,40,"Fresas con crema, clásico y fresco.",PRODUCTOS LOCALES
+ROL ALMENDRA BRIOCHE,49,"Rol de almendra brioche, suave y frutos secos.",PANADERIA DULCE
+JUGO DE TEMPORADA,49,"Jugo de temporada, la fruta del momento.",BEBIDAS FRIAS
+PAN BRIOCHE COCO,40,"Pan brioche de coco, tropical y esponjoso.",PANADERIA DULCE
+MUFFIN COCO BROWNIE,35,"Muffin de coco y brownie, fusión celestial.",PANADERIA DULCE
+VOLCAN NUTELLA,65,"Volcán de Nutella, chocolate fundido.",PANADERIA DULCE
+MUFFIN ROSAGANTE,55,"Muffin rosagante, color y dulzura.",PANADERIA DULCE
+CHOCOLATIN ROSAGANTE,40,"Chocolatín rosagante, capricho rosa.",PANADERIA DULCE
+PAN DE DIOS,55,"Pan de Dios, esponjoso y celestial.",PANADERIA DULCE
+CROISSANT DE PISTACHE,90,"Croissant de pistache, hojaldre verde.",PANADERIA DULCE
+CRUFFIN DE GUAYABA,63,"Cruffin de guayaba, hojaldre tropical.",PANADERIA DULCE
+CROISSANT DE GALLETA,70,"Croissant de galleta, crujiente por dentro.",PANADERIA DULCE
+FLAT CROISSANT,65,"Flat croissant, hojaldre plano y crujiente.",PANADERIA DULCE
+serum,100,"Sérum facial artesanal, luminosidad natural.",PRODUCTOS LOCALES
+COLD BREW HORCH,69,"Cold brew con horchata, fusión refrescante.",BEBIDAS FRIAS
+PANQUE DE MORAS ,200,"Panqué de moras, frutos del bosque.",PANADERIA DULCE
+HORCHATA,49,"Horchata tradicional, dulce y canela.",BEBIDAS FRIAS
+COMPLEMENTO EXTRA ,35,"Complemento extra, el toque que faltaba.",DESAYUNO-CENA
+Galleta lotus chocolate blco,45,Galleta Lotus con chocolate blanco.,PRODUCTOS LOCALES
+BAGUETTE BRIOCHE,24,"Baguette brioche, suave y mantecosa.",PANADERIA SALADA
+PUMKIN SPICE LATTE,69,"Pumpkin spice latte, otoño en taza.",BEBIDAS CALIENTES
+PAN DE MUERTO,40,"Pan de muerto, tradición y aroma a azahar.",PAN DE TEMPORADA
+TARTA DE CALABAZA,70,"Tarta de calabaza, otoño en cada bocado.",PANADERIA DULCE
+STRUDEL DE MANZANA,79,"Strudel de manzana, hojaldre y canela.",PANADERIA DULCE
+TE,30,"Té caliente, sencillez que reconforta.",BEBIDAS CALIENTES
+FRAPPE CHOCO-ABUELITA,69,"Frappé choco-abuelita, chocolate y tradición helada.",BEBIDAS FRIAS
+CAFE PROMOCION,0,"Café en promoción, aprovecha el momento.",BEBIDAS CALIENTES
+PANCAKES DE AVENA ,145,"Pancakes de avena, salud y dulzura.",DESAYUNO-CENA
+BOTELLA MIEL LITRO,140,"Botella de miel litro, oro líquido.",PRODUCTOS LOCALES
+SMOTHIE MANGO,65,"Smoothie de mango, tropical y dulce.",BEBIDAS FRIAS
+PANQUÉ DE ZANAHORIA,220,"Panqué de zanahoria, esponjoso y dorado.",POSTRES
+HORCHATA DE FRESA,59,"Horchata de fresa, fresca y afrutada.",BEBIDAS FRIAS
+CHOCOLATE ABUE GD,65,"Chocolate abuelita grande, como el de casa.",BEBIDAS CALIENTES
+CHOCOLATE ABUE ,59,"Chocolate abuelita, el sabor de siempre.",BEBIDAS CALIENTES
+CRUFFIN CLAUS,73,"Cruffin claus, festivo y hojaldrado.",PANADERIA DULCE
+PANETTONE,159,"Panettone artesanal, tradición italiana.",PAN DE TEMPORADA
+EXPRESSO SENCILLO,40,"Expresso sencillo, puro y potente.",BEBIDAS CALIENTES
+CAJA NAVIDEÑA,320,"Caja navideña, sorpresa festiva.",PAN DE TEMPORADA
+PROMOCION CROISSANT,179,"Promoción croissant, hojaldre y café.",DESAYUNO-CENA
+CLÁSICO PROMO,179,"Clásico en promoción, el favorito a mejor precio.",DESAYUNO-CENA
+MINI PANETONE,40,"Mini panettone, tradición en pequeño.",PANADERIA DULCE
+GALLETA JENGIBRE,40,"Galleta de jengibre, especiada y crujiente.",PRODUCTOS LOCALES
+ROL LOTUS,59,"Rol Lotus, caramelo y crema.",PANADERIA DULCE
+FRENCH TOAST NAVIDEÑO,159,"French toast navideño, fiesta en el paladar.",DESAYUNO-CENA
+MINI ROSCA,55,"Mini rosca, tradición en pequeño.",PAN DE TEMPORADA
+MINI BAGUETTE,20,"Mini baguette, pequeña y crocante.",PANADERIA SALADA
+ROSCA TRADICIONAL ,500,"Rosca tradicional, la de siempre.",PAN DE TEMPORADA
+ROSCA TRADICIONAL RELLENA DE QUESO CREMA,600,Rosca tradicional rellena de queso crema.,PAN DE TEMPORADA
+ROSCA TRADICIONAL RELLENA DE NUTELLA,600,Rosca tradicional rellena de Nutella.,PAN DE TEMPORADA
+MINI ROSCA DE NUTELLA ,65,"Mini rosca de Nutella, pequeña tentación.",PAN DE TEMPORADA
+CARACOLA DE FRAMBUESA ,75,"Caracola de frambuesa, espiral frutal.",PANADERIA DULCE
+TARTA DE FERRERO ROCHER,79,"Tarta Ferrero Rocher, lujo avellana.",PANADERIA DULCE
+TRENZA DE MORAS,69,"Trenza de moras, frutos rojos entrelazados.",PANADERIA DULCE
+TRENZA DE FRUTOS ,60,"Trenza de frutos, color y dulzura.",PANADERIA DULCE
+CROISSANT DE CHOCOLATE ,69,"Croissant de chocolate, hojaldre y cacao.",PANADERIA DULCE
+DANES DE PIÑA,65,"Danés de piña, hojaldre tropical.",PAN DE TEMPORADA
+FLORES CROCHET,60,"Flores tejidas a crochet, belleza eterna.",PRODUCTOS LOCALES
+BOLSITA BESITO DE NUEZ O ALMENDRAS,60,Bolsita de besitos de nuez o almendra.,PRODUCTOS LOCALES
+CAJITA BESITOS DE NUEZ O ALMENDRAS,120,Cajita de besitos de nuez o almendra.,PRODUCTOS LOCALES
+VAINILLA ARTESANAL MEDIANA,120,"Vainilla artesanal mediana, esencia natural.",PRODUCTOS LOCALES
+VAINILLA CHICA,50,"Vainilla artesanal chica, pequeño frasco de aroma.",PRODUCTOS LOCALES
+Ciabatta,35,"Ciabatta italiana, alveolada y crujiente.",PANADERIA SALADA
+TE CHAI,86,"Chai tea especiado, tradición y calidez.",BEBIDAS CALIENTES
+EXTRA SHOT ESPRESSO,15,Extra shot de espresso para los audaces.,BEBIDAS CALIENTES
+FRAPUCHINO,69,"Frapuchino indulgente, capricho helado.",BEBIDAS FRIAS
+PLATO DE FRUTAS,98,"Plato de frutas, arcoíris natural.",DESAYUNO-CENA
+Jamaica,50,Es un jugo ,BEBIDAS FRIAS
+CACAHUATES,30,"Cacahuates artesanales, crujientes y salados.",PRODUCTOS LOCALES
+TARTA DE CEREZA,70,"Tarta de cereza, roja y tentadora.",PANADERIA DULCE
+CARAMEL LATTE,75,"Bebida artesanal, fresca y deliciosa.",BEBIDAS CALIENTES
+TARTA ALCACHOFA,60,"Tarta de alcachofa, salada y sorprendente.",PANADERIA DULCE
+CROOKIE MACADAMIA,70,"Crookie de macadamia, hojaldre y nuez.",PANADERIA DULCE
+TARTA PRIMAVERA DE FRUTOS,69,"Tarta primavera de frutos, color y frescura.",PANADERIA DULCE
+JAMAICA DE TE DE FRUTOS ROJOS,50,"Jamaica con té de frutos rojos, fusión refrescante.",BEBIDAS FRIAS
+FLORENTINA DE FRESA,35,"Florentina de fresa, fina y frutal.",POSTRES
+BAGUETTE BRIOCH PQ,60,"Baguette brioche pequeña, bocado parisino.",PANADERIA SALADA
+LATTE FRIO ,75,"Latte frío, refrescante y cremoso.",BEBIDAS FRIAS
+DALGONA LATTE,69,"Dalgona latte, espuma coreana de café.",BEBIDAS FRIAS
+TOAST HUMMUS DE BETABEL,189,"Toast hummus de betabel, color y sabor.",DESAYUNO-CENA
+CARACOLA DE ALMENDRA DE CAFESIA ,65,"Caracola de almendra Cafesia, espiral crocante.",PANADERIA DULCE
+CHOCOLATINA DE CAFESIA ,59,"Chocolatina Cafesia, capricho artesanal.",PANADERIA DULCE
+PAN DE CHOCO ALMENDRA CAFESIA ,69,Pan de chocolate y almendra Cafesia.,PANADERIA DULCE
+GALLETAS DE AVENA CON CHISPAS ,40,"Galletas de avena con chispas, saludables y crujientes.",PANADERIA DULCE
+TRENZA LOTUS,69,"Trenza Lotus, caramelo en espiral.",PANADERIA DULCE
+CHEESCAKE DANES,79,"Cheesecake danés, cremoso y hojaldrado.",PANADERIA DULCE
+COMPLEMENTO EXTRA en el CLASICO,25,Complemento extra para tu clásico.,DESAYUNO-CENA
+leche oatly avena ,15,"Leche de avena Oatly, suave y vegetal.",BEBIDAS CALIENTES
+HORCHATA VICTORIA ,70,"Horchata Victoria, tradición refrescante.",PRODUCTOS LOCALES
+muffin de zanahoria ,50,"Muffin de zanahoria, esponjoso y saludable.",PANADERIA DULCE
+TE 27,40,"Té 27, misterioso y refrescante.",BEBIDAS FRIAS
+COLDBREW LATA,50,"Cold brew en lata, café para llevar.",BEBIDAS FRIAS
+SALSA MACHA ARTESANAL,80,"Salsa macha artesanal, picante con carácter.",PRODUCTOS LOCALES
+LATTE VAINILLA,73,"Latte vainilla frío, dulce y aromático.",BEBIDAS FRIAS
+PAN DE HIGO,70,"Pan de higo, dulce y natural.",PAN DE TEMPORADA
+TRENZA DE Q. Y MORAS,69,"Trenza de queso y moras, crema y fruta.",PANADERIA DULCE
+Malanguitas,35,"Malanguitas, sabor tradicional.",PRODUCTOS LOCALES
+MALANGAS,40,"Malangas, el clásico de siempre.",PRODUCTOS LOCALES
+MUFFIN DE BETABEL Y ZANAHORIA,70,crumbl de avena y nuez,PANADERIA DULCE
+LIMONADA,50,"Limonada artesanal, fresca y chispeante.",BEBIDAS FRIAS
+Limonada macha,69,"Limonada macha, cítrica con un toque audaz.",BEBIDAS FRIAS
+BOSTOCK BRIOCH DE ALMENDRA,59,"Bostock brioche de almendra, crocante y suave.",PANADERIA DULCE
+TARTA DE MANZANA DANESA ,65,"Tarta de manzana danesa, hojaldre y fruta.",PANADERIA DULCE
+TARTA DE MANZANA DANESA ,65,"Tarta de manzana danesa, hojaldre y fruta.",PANADERIA DULCE
+REPELENTE,90,"Repelente natural, protección artesanal.",PRODUCTOS LOCALES
+PAN DE MUERTO RELLENO,85,"Pan de muerto relleno, tradición con sorpresa.",PAN DE TEMPORADA
+REBANADA DE PANQUE CALABAZA,69,"Rebanada de panqué de calabaza, otoño en casa.",POSTRES
+MUFFIN DE NARANJA,50,"Muffin de naranja, cítrico y esponjoso.",PANADERIA DULCE
+PUMPKIN SPICE LATTE,69,"Pumpkin spice latte, calabaza especiada.",BEBIDAS CALIENTES
+CONCHA CALABAZA,59,"Concha de calabaza, otoño y dulzura.",POSTRES
+HOGAZA DE PESTO,130,"Hogaza de pesto, verde y aromática.",PANADERIA SALADA
+CROISSANT DE TIRAMISU,95,"Croissant de tiramisú, hojaldre italiano.",PAN DE TEMPORADA
+CONCHA HALLOWEEN,59,"Concha Halloween, divertida y deliciosa.",PAN DE TEMPORADA
+CRUFFIN CHURRO,69,"Cruffin churro, hojaldre y canela.",PAN DE TEMPORADA
+TOAST ESPINACA Y PARMESANO,189,"Toast de espinaca y parmesano, verde y gratinado.",DESAYUNO-CENA
+PAN DE MUERTO GRANDE,150,"Pan de muerto grande, para compartir.",PAN DE TEMPORADA
+GALLETAS DE TEMPORADA,35,"Galletas de temporada, edición especial.",POSTRES
+LATTE MALVAVISCO,79,"Latte con malvavisco frío, dulce nube.",BEBIDAS FRIAS
+horchata de pumpking,69,"Horchata de pumpkin, otoño en vaso.",BEBIDAS FRIAS
+EXTRA DE PAN,10,"Extra de pan, para los que quieren más.",PANADERIA SALADA
+BAGUETTE LARGA,60,"Baguette larga, crujiente y artesanal.",PANADERIA SALADA
+CRUFFIN MANZANA GLASEADO DE NARANJA Y NUEZ,79,Cruffin manzana glaseado naranja nuez.,PAN DE TEMPORADA
+CROQUE MONSIEUR,189,"Croque monsieur, parisino y gratinado.",DESAYUNO-CENA
+CROQUE MADAM,209,"Croque madam, con huevo y elegancia.",DESAYUNO-CENA
+MINI PANETTONE,95,"Mini panettone, tradición italiana.",PAN DE TEMPORADA
+PANETTONE FAMILIAR,250,"Panettone familiar, para compartir en fiestas.",PAN DE TEMPORADA
+CHAI MANZANA CANELA,89,"Chai de manzana y canela, abrazo especiado.",BEBIDAS CALIENTES
+LATTE MALVADISCO,79,"Latte malvavisco frío, capricho esponjoso.",BEBIDAS CALIENTES
+HOGAZA 3 QUESOS MASA MADRE,350,"Hogaza 3 quesos masa madre, gratinada.",PAN DE TEMPORADA
+MACARRONES,20,"Macarrones artesanales, color y elegancia.",POSTRES
+GRILLED PESTO SANDWICH,189,"Grilled pesto sandwich, verde y crujiente.",DESAYUNO-CENA
+TARTA DE  NUEZ,89,Pan artesanal horneado con amor cada mañana.,PANADERIA DULCE
+TIRAMISU,60,"Tiramisú clásico, capas de café y crema.",POSTRES
+PAQUETE,250,"Paquete especial, todo en uno.",DESAYUNO-CENA
+MOSTACHÓN,600,"Mostachón, merengue y nuez, nube crujiente.",POSTRES
+PARFAIT FRUTOS ROJOS,119,"Parfait de frutos rojos, capas de frescura.",DESAYUNO-CENA
+LECHE DORADA,83,"Leche dorada con cúrcuma, brillo y bienestar.",BEBIDAS CALIENTES
+BANDEJA TIRAMISU,110,"Bandeja de tiramisú, para compartir.",POSTRES
+CROOKIE RED VELVET CROISSANT,79,"Crookie red velvet, hojaldre y terciopelo.",PANADERIA DULCE
+NIDO DE PISTACHE Y FRAMBUESA,89,"Nido de pistache y frambuesa, verde y rojo.",PANADERIA DULCE
+PINK VAINILLA LATTE,75,"Pink vanilla latte, rosa y dulce.",BEBIDAS FRIAS
+FRAPPE RED VELVET,85,"Frappé red velvet, pasión en taza.",BEBIDAS FRIAS
+SODA ITALIANA DE FRESA,69,"Soda italiana de fresa, burbujas dulces.",BEBIDAS FRIAS
+FINANCIER DE NARANJA Y ALM,63,"Financier de naranja y almendra, pequeño lujo.",PAN DE TEMPORADA
+AMERICANO GRANDE ,79,"Americano grande, generoso y suave.",BEBIDAS CALIENTES

@@ -1,0 +1,56 @@
+<div class="animate-hx-fade-in text-white/80">
+    <div class="flex items-center justify-between mb-phi">
+        <h2 class="font-heading text-phi-2 font-bold text-white">Pedido #{{ pedido.id_pedido[:8] }}</h2>
+        <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold
+                    {% if pedido.estado == 'pendiente' %}bg-yellow-500/20 text-yellow-300
+                    {% elif pedido.estado == 'confirmado' %}bg-blue-500/20 text-blue-300
+                    {% elif pedido.estado == 'entregado' %}bg-green-500/20 text-green-300
+                    {% elif pedido.estado == 'cancelado' %}bg-red-500/20 text-red-300
+                    {% endif %}">
+            {{ pedido.estado_label }}
+        </span>
+    </div>
+
+    {% if pedido.fecha %}
+    <p class="text-xs text-white/40 mb-phi">{{ pedido.fecha }}</p>
+    {% endif %}
+
+    <div class="space-y-2">
+        {% for item in pedido.items %}
+        <div class="flex items-center justify-between py-1.5 border-b border-white/5 last:border-0">
+            <div class="flex items-center gap-2 min-w-0">
+                {% if item.imagen %}
+                <img src="{{ item.imagen }}" alt="{{ item.titulo }}" class="w-9 h-9 rounded-lg object-cover shrink-0">
+                {% endif %}
+                <div class="min-w-0">
+                    <p class="text-sm text-white truncate">{{ item.titulo }}</p>
+                    <p class="text-[10px] text-white/40">{{ item.cantidad }} x S/ {{ "%.2f"|format(item.precio_unitario) }}</p>
+                </div>
+            </div>
+            <span class="text-sm font-semibold text-white shrink-0 ml-2">S/ {{ "%.2f"|format(item.subtotal) }}</span>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="mt-phi pt-phi border-t border-white/10 flex items-center justify-between">
+        <span class="text-sm text-white/60 font-medium">Total</span>
+        <span class="text-lg font-bold text-pastel-pink">S/ {{ "%.2f"|format(pedido.total) }}</span>
+    </div>
+
+    <div class="mt-phi-2 flex gap-2">
+        <button hx-get="/mis-pedidos"
+                hx-target="#modal-body"
+                hx-swap="innerHTML"
+                class="flex-1 bg-white/10 text-white font-heading font-semibold text-sm
+                       px-4 py-2.5 rounded-full border border-white/20
+                       hover:bg-white hover:text-brand-dark transition-all duration-200 active:scale-[0.97]">
+            Volver
+        </button>
+        <button onclick="window.dispatchEvent(new CustomEvent('close-modal'))"
+                class="flex-1 bg-pastel-pink text-brand-dark font-heading font-semibold text-sm
+                       px-4 py-2.5 rounded-full
+                       hover:bg-white hover:text-brand-dark transition-all duration-200 active:scale-[0.97]">
+            Cerrar
+        </button>
+    </div>
+</div>

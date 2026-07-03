@@ -1,47 +1,176 @@
-<div class="animate-hx-fade-in">
+{% extends "base.html" %}
+
+{% block title %}LetuchWebSite | Servicios{% endblock %}
+
+{% block content %}
+
+<div id="content-area"
+     class="min-h-[50vh] rounded-2xl
+            bg-[rgba(29,93,115,0.25)] backdrop-blur-[16px]
+            border border-[rgba(200,220,240,0.12)]
+            shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]
+            p-phi md:p-phi-2">
     <div class="text-center mb-phi-3 md:mb-phi-4">
-        <h2 class="font-heading text-phi-2 md:text-phi-3 font-bold text-brand-dark leading-[1.1]">
-            {{ section_title }}
+        <h2 class="font-heading text-phi-2 md:text-phi-3 font-bold text-white leading-[1.1]">
+            Servicios
         </h2>
-        <div class="w-[61.8%] md:w-[38.2%] h-0.5 bg-brand/30 mx-auto mt-4 mb-4"></div>
-        <p class="text-brand-dark/70 text-base md:text-phi-base max-w-[61.8%] mx-auto">
-            {{ section_desc }}
+        <div class="w-[61.8%] md:w-[38.2%] h-0.5 bg-white/20 mx-auto mt-4 mb-4"></div>
+        <p class="text-white/60 text-base md:text-phi-base max-w-[61.8%] mx-auto">
+            Soluciones y servicios diseñados para la comodidad y crecimiento del negocio.
         </p>
     </div>
 
     <div class="space-y-phi-2">
-        {% for doc in documentos %}
-        <div class="group relative flex flex-col {% if loop.index is odd %}md:flex-row{% else %}md:flex-row-reverse{% endif %}
-                    gap-phi md:gap-phi-2
-                    bg-white/60 backdrop-blur-sm rounded-2xl p-phi md:p-phi-3
-                    border border-brand/5 shadow-sm
-                    transition-all duration-500 ease-out
-                    hover:shadow-xl hover:border-brand/20 hover:bg-white/80 hover:-translate-y-1
-                    cursor-pointer">
-            {% if doc.imagen %}
+
+        <!-- Card 1: Surtido a cafeterías → Contacto -->
+        <div x-data="{ loaded: false }" x-init="setTimeout(() => loaded = true, 0)"
+             :class="loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+             class="group relative flex flex-col md:flex-row gap-phi md:gap-phi-2 rounded-2xl p-phi md:p-phi-3
+                    bg-[rgba(29,93,115,0.25)] backdrop-blur-[16px]
+                    border border-[rgba(200,220,240,0.12)]
+                    shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]
+                    hover:bg-[rgba(29,93,115,0.35)] hover:border-pastel-pink/40
+                    hover:shadow-[0_12px_48px_0_rgba(242,182,198,0.15)] hover:-translate-y-1
+                    transition-all duration-500 ease-out cursor-pointer
+                    active:scale-[0.98]"
+             hx-get="/section/contacto" hx-target="#content-area" hx-select="#content-area" hx-swap="innerHTML show:#content:top" hx-push-url="true">
             <div class="md:w-[38.2%] overflow-hidden rounded-xl">
-                <img src="{{ doc.imagen }}" alt="{{ doc.titulo }}"
-                     class="w-full h-48 md:h-56 object-cover rounded-xl
-                            transition-all duration-500 ease-out
-                            group-hover:scale-105 group-hover:rotate-1
-                            hover:scale-110 hover:rotate-2">
+                <img src="/static/images/721266118_18538905730073817_2825081271361550579_n.jpg"
+                     alt="Servicio de Surtido a cafeterias"
+                     class="w-full h-48 md:h-56 object-cover rounded-xl transition-all duration-700 ease-out
+                            group-hover:scale-110 group-hover:rotate-1">
             </div>
-            {% endif %}
-            <div class="{% if doc.imagen %}md:w-[61.8%]{% else %}w-full{% endif %} flex flex-col justify-center">
-                <h3 class="font-heading text-phi-1 font-semibold text-brand-dark mb-2
-                           transition-all duration-500
-                           group-hover:text-brand
-                           group-hover:translate-x-1">
-                    {{ doc.titulo }}
+            <div class="md:w-[61.8%] flex flex-col justify-center">
+                <span class="text-[10px] font-medium text-pastel-pink/60 uppercase tracking-widest mb-1">Contacto →</span>
+                <h3 class="font-heading text-phi-1 font-semibold text-white mb-2 transition-all duration-500
+                           group-hover:text-pastel-pink group-hover:translate-x-1">
+                    Servicio de Surtido a cafeterias
                 </h3>
-                <p class="text-brand-dark/60 text-sm leading-[1.618]
-                          transition-all duration-500
-                          group-hover:text-brand-dark/80
-                          group-hover:translate-x-1">
-                    {{ doc.descripcion }}
+                <p class="text-white/50 text-sm leading-[1.618] transition-all duration-500
+                          group-hover:text-white/80 group-hover:translate-x-1">
+                    Servicios y soluciones enfocadas para la comodidad y crecimiento del negocio
                 </p>
+                <div class="mt-3 flex items-center gap-1 text-pastel-pink/60 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-8px] group-hover:translate-x-0">
+                    <span>Contáctanos</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </div>
             </div>
         </div>
-        {% endfor %}
+
+        <!-- Card 2: Servicio de Vitrina → Inicio -->
+        <div x-data="{ loaded: false }" x-init="setTimeout(() => loaded = true, 150)"
+             :class="loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+             class="group relative flex flex-col md:flex-row-reverse gap-phi md:gap-phi-2 rounded-2xl p-phi md:p-phi-3
+                    bg-[rgba(29,93,115,0.25)] backdrop-blur-[16px]
+                    border border-[rgba(200,220,240,0.12)]
+                    shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]
+                    hover:bg-[rgba(29,93,115,0.35)] hover:border-pastel-pink/40
+                    hover:shadow-[0_12px_48px_0_rgba(242,182,198,0.15)] hover:-translate-y-1
+                    transition-all duration-500 ease-out cursor-pointer
+                    active:scale-[0.98]"
+             hx-get="/section/inicio" hx-target="#content-area" hx-select="#content-area" hx-swap="innerHTML show:#content:top" hx-push-url="true">
+            <div class="md:w-[38.2%] overflow-hidden rounded-xl">
+                <img src="/static/images/caption.webp"
+                     alt="Servicio de Vitrina"
+                     class="w-full h-48 md:h-56 object-cover rounded-xl transition-all duration-700 ease-out
+                            group-hover:scale-110 group-hover:-rotate-1">
+            </div>
+            <div class="md:w-[61.8%] flex flex-col justify-center">
+                <span class="text-[10px] font-medium text-pastel-pink/60 uppercase tracking-widest mb-1">Vitrina →</span>
+                <h3 class="font-heading text-phi-1 font-semibold text-white mb-2 transition-all duration-500
+                           group-hover:text-pastel-pink group-hover:translate-x-1">
+                    Servicio de Vitrina
+                </h3>
+                <p class="text-white/50 text-sm leading-[1.618] transition-all duration-500
+                          group-hover:text-white/80 group-hover:translate-x-1">
+                    Una muestra de nuestro pan fresco disponible en nuestras tiendas
+                </p>
+                <div class="mt-3 flex items-center gap-1 text-pastel-pink/60 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-8px] group-hover:translate-x-0">
+                    <span>Ver productos</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: Larder & Kitchen → Inicio -->
+        <div x-data="{ loaded: false }" x-init="setTimeout(() => loaded = true, 300)"
+             :class="loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+             class="group relative flex flex-col md:flex-row gap-phi md:gap-phi-2 rounded-2xl p-phi md:p-phi-3
+                    bg-[rgba(29,93,115,0.25)] backdrop-blur-[16px]
+                    border border-[rgba(200,220,240,0.12)]
+                    shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]
+                    hover:bg-[rgba(29,93,115,0.35)] hover:border-pastel-pink/40
+                    hover:shadow-[0_12px_48px_0_rgba(242,182,198,0.15)] hover:-translate-y-1
+                    transition-all duration-500 ease-out cursor-pointer
+                    active:scale-[0.98]"
+             hx-get="/section/inicio" hx-target="#content-area" hx-select="#content-area" hx-swap="innerHTML show:#content:top" hx-push-url="true">
+            <div class="md:w-[38.2%] overflow-hidden rounded-xl">
+                <img src="/static/images/borbon.jpg"
+                     alt="Larder &amp; Kitchen"
+                     class="w-full h-48 md:h-56 object-cover rounded-xl transition-all duration-700 ease-out
+                            group-hover:scale-110 group-hover:rotate-1">
+            </div>
+            <div class="md:w-[61.8%] flex flex-col justify-center">
+                <span class="text-[10px] font-medium text-pastel-pink/60 uppercase tracking-widest mb-1">Menú →</span>
+                <h3 class="font-heading text-phi-1 font-semibold text-white mb-2 transition-all duration-500
+                           group-hover:text-pastel-pink group-hover:translate-x-1">
+                    Larder &amp; Kitchen
+                </h3>
+                <p class="text-white/50 text-sm leading-[1.618] transition-all duration-500
+                          group-hover:text-white/80 group-hover:translate-x-1">
+                    Nacimos para el café, pero nuestra cocina de firma te hará volver.
+                </p>
+                <div class="mt-3 flex items-center gap-1 text-pastel-pink/60 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-8px] group-hover:translate-x-0">
+                    <span>Ver productos</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4: Culto al Café → Inicio -->
+        <div x-data="{ loaded: false }" x-init="setTimeout(() => loaded = true, 450)"
+             :class="loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+             class="group relative flex flex-col md:flex-row-reverse gap-phi md:gap-phi-2 rounded-2xl p-phi md:p-phi-3
+                    bg-[rgba(29,93,115,0.25)] backdrop-blur-[16px]
+                    border border-[rgba(200,220,240,0.12)]
+                    shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]
+                    hover:bg-[rgba(29,93,115,0.35)] hover:border-pastel-pink/40
+                    hover:shadow-[0_12px_48px_0_rgba(242,182,198,0.15)] hover:-translate-y-1
+                    transition-all duration-500 ease-out cursor-pointer
+                    active:scale-[0.98]"
+             hx-get="/section/inicio" hx-target="#content-area" hx-select="#content-area" hx-swap="innerHTML show:#content:top" hx-push-url="true">
+            <div class="md:w-[38.2%] overflow-hidden rounded-xl">
+                <img src="/static/images/Bebida.jpg"
+                     alt="Culto al Café &amp; Bebidas de Especialidad"
+                     class="w-full h-48 md:h-56 object-cover rounded-xl transition-all duration-700 ease-out
+                            group-hover:scale-110 group-hover:-rotate-1">
+            </div>
+            <div class="md:w-[61.8%] flex flex-col justify-center">
+                <span class="text-[10px] font-medium text-pastel-pink/60 uppercase tracking-widest mb-1">Bebidas →</span>
+                <h3 class="font-heading text-phi-1 font-semibold text-white mb-2 transition-all duration-500
+                           group-hover:text-pastel-pink group-hover:translate-x-1">
+                    Culto al Café &amp; Bebidas de Especialidad
+                </h3>
+                <p class="text-white/50 text-sm leading-[1.618] transition-all duration-500
+                          group-hover:text-white/80 group-hover:translate-x-1">
+                    una carta de bebidas frías y calientes diseñada para complementar nuestra cocina
+                </p>
+                <div class="mt-3 flex items-center gap-1 text-pastel-pink/60 text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-[-8px] group-hover:translate-x-0">
+                    <span>Ver productos</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
+
+{% endblock %}

@@ -1,21 +1,37 @@
-<div class="animate-hx-fade-in">
+{% extends "base.html" %}
+
+{% block title %}LetuchWebSite | Contacto{% endblock %}
+
+{% block content %}
+
+<div id="content-area"
+     class="animate-hx-fade-in text-white/80 min-h-[50vh] rounded-2xl
+            bg-[rgba(29,93,115,0.25)] backdrop-blur-[16px]
+            border border-[rgba(200,220,240,0.12)]
+            shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]
+            p-phi md:p-phi-2">
     <div class="text-center mb-phi-3 md:mb-phi-4">
-        <h2 class="font-heading text-phi-2 md:text-phi-3 font-bold text-brand-dark leading-[1.1]">
-            {{ section_title }}
+        <h2 class="font-heading text-phi-2 md:text-phi-3 font-bold text-white leading-[1.1]">
+            Contacto
         </h2>
-        <div class="w-[61.8%] md:w-[38.2%] h-0.5 bg-brand/30 mx-auto mt-4 mb-4"></div>
-        <p class="text-brand-dark/70 text-base md:text-phi-base max-w-[61.8%] mx-auto">
-            {{ section_desc }}
+        <div class="w-[61.8%] md:w-[38.2%] h-0.5 bg-white/20 mx-auto mt-4 mb-4"></div>
+        <p class="text-white/60 text-base md:text-phi-base max-w-[61.8%] mx-auto">
+            Hablemos de tu próximo proyecto.
         </p>
     </div>
 
     <div class="max-w-[61.8%] mx-auto space-y-phi-2">
 
         <!-- Social Links -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-phi-2">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4">
             <a href="https://www.instagram.com/letuchbakery/?hl=en" target="_blank" rel="noopener noreferrer"
-               class="flex items-center gap-4 bg-white/60 backdrop-blur-sm rounded-2xl p-phi md:p-phi-2 border border-brand/5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-                <svg viewBox="0 0 24 24" class="w-7 h-7 shrink-0">
+               class="flex flex-col items-center justify-center gap-1 md:gap-1.5 rounded-2xl p-3 md:p-4
+                      bg-[rgba(29,93,115,0.25)] backdrop-blur-[16px]
+                      border border-[rgba(200,220,240,0.12)]
+                      shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]
+                      hover:bg-[rgba(29,93,115,0.35)] hover:border-[rgba(200,220,240,0.25)]
+                      hover:-translate-y-1 transition-all duration-300">
+                <svg viewBox="0 0 24 24" class="w-6 h-6 md:w-7 md:h-7 shrink-0">
                     <defs>
                         <linearGradient id="ig" x1="0" y1="1" x2="1" y2="0">
                             <stop offset="0%" stop-color="#F58529"/>
@@ -29,54 +45,94 @@
                     <circle cx="12" cy="12" r="5.5" fill="none" stroke="white" stroke-width="1.5"/>
                     <circle cx="17.5" cy="6.5" r="1.5" fill="white"/>
                 </svg>
-                <span class="font-heading text-sm font-semibold text-brand-dark">Instagram</span>
+                <span class="font-heading text-[10px] md:text-xs font-semibold text-white text-center leading-tight">Instagram</span>
             </a>
             <a href="https://www.facebook.com/Letuchbakery/" target="_blank" rel="noopener noreferrer"
-               class="flex items-center gap-4 bg-white/60 backdrop-blur-sm rounded-2xl p-phi md:p-phi-2 border border-brand/5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-                <svg viewBox="0 0 24 24" class="w-7 h-7 shrink-0">
+               class="flex flex-col items-center justify-center gap-1 md:gap-1.5 rounded-2xl p-3 md:p-4
+                      bg-[rgba(29,93,115,0.25)] backdrop-blur-[16px]
+                      border border-[rgba(200,220,240,0.12)]
+                      shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]
+                      hover:bg-[rgba(29,93,115,0.35)] hover:border-[rgba(200,220,240,0.25)]
+                      hover:-translate-y-1 transition-all duration-300">
+                <svg viewBox="0 0 24 24" class="w-6 h-6 md:w-7 md:h-7 shrink-0">
                     <circle cx="12" cy="12" r="11" fill="#1877F2"/>
                     <path d="M15.5 8.5H13V7a1 1 0 011-1h1.5V3.5H13a3 3 0 00-3 3v2H8.5V11H10v7h3v-7h2l.5-2.5z" fill="white"/>
                 </svg>
-                <span class="font-heading text-sm font-semibold text-brand-dark">Facebook</span>
+                <span class="font-heading text-[10px] md:text-xs font-semibold text-white text-center leading-tight">Facebook</span>
+            </a>
+            <a href="https://wa.me/529991718947" target="_blank" rel="noopener noreferrer"
+               class="flex flex-col items-center justify-center gap-1 md:gap-1.5 rounded-2xl p-3 md:p-4
+                      bg-[rgba(29,93,115,0.25)] backdrop-blur-[16px]
+                      border border-[rgba(200,220,240,0.12)]
+                      shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]
+                      hover:bg-[rgba(29,93,115,0.35)] hover:border-[rgba(200,220,240,0.25)]
+                      hover:-translate-y-1 transition-all duration-300">
+                <svg viewBox="0 0 24 24" class="w-6 h-6 md:w-7 md:h-7 shrink-0">
+                    <circle cx="12" cy="12" r="11" fill="#25D366"/>
+                    <path d="M17.5 6.5a7.5 7.5 0 00-12.5 5.6c0 1.3.3 2.6 1 3.7L5 19l3.3-1.1c1.1.6 2.3.9 3.6.9h.3a7.5 7.5 0 005.3-12.3zM12 17.2h-.2c-1.1 0-2.2-.3-3.1-.9l-.2-.1-2 .7.7-2-.2-.2a5.8 5.8 0 01-.9-3.1 5.7 5.7 0 115.9 5.6zm3.2-4.3c-.2-.1-1.1-.5-1.3-.6-.2-.1-.3-.1-.4.1-.2.2-.5.6-.6.7-.1.2-.2.2-.4.1-.8-.3-1.5-.7-2.1-1.2-.2-.2-.4-.4-.6-.7-.1-.1 0-.3 0-.3s.1-.1.2-.2l.2-.2c.1-.1.1-.2.2-.3.1-.1 0-.3 0-.4-.1-.1-.5-1.1-.6-1.5-.2-.4-.4-.4-.5-.4h-.4c-.2 0-.4.1-.6.2-.3.3-.6.7-.6 1.2 0 .5.3 1 .4 1.1.1.1 1 1.5 2.4 2.2.3.1.6.3.9.4.4.1.7.1 1 .1.3 0 .8-.1 1.1-.3.3-.2.5-.5.6-.8.1-.3.1-.6.1-.7-.1-.1-.2-.2-.4-.3z" fill="white"/>
+                </svg>
+                <span class="font-heading text-[10px] md:text-xs font-semibold text-white text-center leading-tight">WhatsApp</span>
             </a>
             <a href="https://www.tripadvisor.com.mx/Restaurant_Review-g150811-d16824137-Reviews-Letuch-Merida_Yucatan_Peninsula.html" target="_blank" rel="noopener noreferrer"
-               class="flex items-center gap-4 bg-white/60 backdrop-blur-sm rounded-2xl p-phi md:p-phi-2 border border-brand/5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-                <svg viewBox="0 0 24 24" class="w-7 h-7 shrink-0">
+               class="flex flex-col items-center justify-center gap-1 md:gap-1.5 rounded-2xl p-3 md:p-4
+                      bg-[rgba(29,93,115,0.25)] backdrop-blur-[16px]
+                      border border-[rgba(200,220,240,0.12)]
+                      shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]
+                      hover:bg-[rgba(29,93,115,0.35)] hover:border-[rgba(200,220,240,0.25)]
+                      hover:-translate-y-1 transition-all duration-300">
+                <svg viewBox="0 0 24 24" class="w-6 h-6 md:w-7 md:h-7 shrink-0">
                     <circle cx="12" cy="12" r="11" fill="#00AF87"/>
                     <circle cx="9" cy="10" r="2.5" fill="white"/>
                     <circle cx="15" cy="10" r="2.5" fill="white"/>
                     <path d="M12 14l-2 3h4l-2-3z" fill="white"/>
                 </svg>
-                <span class="font-heading text-sm font-semibold text-brand-dark">TripAdvisor</span>
+                <span class="font-heading text-[10px] md:text-xs font-semibold text-white text-center leading-tight">TripAdvisor</span>
             </a>
         </div>
 
         <!-- Contact Info -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-phi-2">
-            <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-phi md:p-phi-2 border border-brand/5 shadow-sm space-y-5">
-                <h3 class="font-heading text-phi-1 font-semibold text-brand-dark">Dirección</h3>
+            <div class="rounded-2xl p-phi md:p-phi-2
+                        bg-[rgba(29,93,115,0.25)] backdrop-blur-[16px]
+                        border border-[rgba(200,220,240,0.12)]
+                        shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]
+                        space-y-5">
+                <h3 class="font-heading text-phi-1 font-semibold text-white">Dirección</h3>
                 <a href="https://www.google.com/maps?q=53D+%23195+x+40+y+42,+Francisco+de+Montejo,+97203+M%C3%A9rida,+Yuc.,+Mexico"
                    target="_blank" rel="noopener noreferrer"
-                   class="flex items-start gap-4 text-brand-dark/70 hover:text-brand transition-colors">
+                   class="flex items-start gap-4 text-white/60 hover:text-pastel-pink transition-colors">
                     <span class="text-lg shrink-0 mt-0.5">📍</span>
                     <span class="text-sm leading-relaxed">53D #195 x 40 y 42, Francisco de Montejo, 97203 Mérida, Yuc., Mexico</span>
                 </a>
                 <a href="tel:+529991718947"
-                   class="flex items-center gap-4 text-brand-dark/70 hover:text-brand transition-colors">
+                   class="flex items-center gap-4 text-white/60 hover:text-pastel-pink transition-colors">
                     <span class="text-lg shrink-0">📞</span>
                     <span class="text-sm">+52 999 171 8947</span>
                 </a>
                 <a href="mailto:letuchbakery@gmail.com"
-                   class="flex items-center gap-4 text-brand-dark/70 hover:text-brand transition-colors">
+                   class="flex items-center gap-4 text-white/60 hover:text-pastel-pink transition-colors">
                     <span class="text-lg shrink-0">✉️</span>
                     <span class="text-sm">letuchbakery@gmail.com</span>
                 </a>
+                <div class="w-full rounded-xl overflow-hidden border border-[rgba(200,220,240,0.12)]">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.5937685043253!2d-89.6238357!3d20.975351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5670c9e7b7c6b7%3A0x8f5670c9e7b7c6b7!2s53D%20%23195%2C%20Francisco%20de%20Montejo%2C%2097203%20M%C3%A9rida%2C%20Yuc.!5e0!3m2!1ses!2smx!4v1"
+                        width="100%"
+                        height="200"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
 
-            <!-- Hours -->
-            <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-phi md:p-phi-2 border border-brand/5 shadow-sm">
-                <h3 class="font-heading text-phi-1 font-semibold text-brand-dark mb-4">Horarios</h3>
-                <div class="space-y-3 text-sm text-brand-dark/70">
+            <div class="rounded-2xl p-phi md:p-phi-2
+                        bg-[rgba(29,93,115,0.25)] backdrop-blur-[16px]
+                        border border-[rgba(200,220,240,0.12)]
+                        shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]">
+                <h3 class="font-heading text-phi-1 font-semibold text-white mb-4">Horarios</h3>
+                <div class="space-y-3 text-sm text-white/60">
                     <div class="flex justify-between">
                         <span class="font-medium">Lunes</span>
                         <span class="text-right">8:00 a. m. - 2:00 p. m.<br>5:00 p. m. - 8:00 p. m.</span>
@@ -101,7 +157,7 @@
                         <span class="font-medium">Sábado</span>
                         <span class="text-right">8:00 a. m. - 2:00 p. m.</span>
                     </div>
-                    <div class="flex justify-between text-brand font-semibold">
+                    <div class="flex justify-between text-pastel-pink font-semibold">
                         <span>Domingo</span>
                         <span>CERRADO</span>
                     </div>
@@ -111,3 +167,5 @@
 
     </div>
 </div>
+
+{% endblock %}

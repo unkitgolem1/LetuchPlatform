@@ -1,0 +1,24 @@
+<div class="animate-hx-fade-in text-white/80">
+    <div class="flex items-center justify-center mb-phi-2">
+        <div class="w-14 h-14 rounded-full bg-red-400/20 flex items-center justify-center">
+            <svg class="w-7 h-7 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </div>
+    </div>
+    <h2 class="font-heading text-phi-1 font-bold text-white text-center">Error al procesar el pago</h2>
+    <p class="text-white/50 text-sm text-center mt-1">{{ error }}</p>
+
+    <button hx-get="/mis-pedidos"
+            hx-target="#modal-body"
+            hx-swap="innerHTML"
+            class="w-full mt-phi-2 bg-pastel-pink text-brand-dark font-heading font-semibold text-sm
+                   px-4 py-2.5 rounded-full
+                   hover:bg-white hover:text-brand-dark transition-all duration-200 active:scale-[0.97]">
+        Mis pedidos
+    </button>
+    <button onclick="window.dispatchEvent(new CustomEvent('close-modal'))"
+            class="w-full mt-2 text-xs font-heading font-semibold text-pastel-pink hover:text-white transition-colors">
+        Cerrar
+    </button>
+</div>

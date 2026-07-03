@@ -8,3 +8,27 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Environment variables (contains secrets)
+.env
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Deployment / runtime
+*.pid
+*.log
+*.sqlite3
+/static/images/*.jpg
+/static/images/*.JPG
+/static/images/*.jpeg
+/static/images/*.JPEG
+/static/images/*.png
+/static/images/*.webp
+/static/images/*.avif

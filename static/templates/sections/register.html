@@ -1,0 +1,103 @@
+<div class="animate-hx-fade-in text-white/80" x-data="{ showPsw: false, showConfirm: false, loading: false }">
+    <h2 class="font-heading text-phi-2 font-bold text-white mb-phi">Crear cuenta</h2>
+
+    <form hx-post="/auth/register"
+          hx-target="#modal-body"
+          hx-swap="innerHTML"
+          hx-on::before-request="loading = true"
+          hx-on::after-request="loading = false"
+          class="space-y-3">
+        <div>
+            <label class="text-xs text-white/50 font-medium">Nombre</label>
+            <input type="text" name="nombre" required
+                   class="w-full mt-1 px-3 py-2 rounded-xl bg-white/10 border
+                          {% if errors|selectattr('field','equalto','nombre')|list %}border-red-400/60{% else %}border-white/20{% endif %}
+                          text-white text-sm placeholder:text-white/30
+                          focus:outline-none focus:border-pastel-pink focus:ring-1 focus:ring-pastel-pink/50
+                          transition-all">
+        </div>
+        <div>
+            <label class="text-xs text-white/50 font-medium">Email</label>
+            <input type="email" name="email" required
+                   class="w-full mt-1 px-3 py-2 rounded-xl bg-white/10 border
+                          {% if errors|selectattr('field','equalto','email')|list %}border-red-400/60{% else %}border-white/20{% endif %}
+                          text-white text-sm placeholder:text-white/30
+                          focus:outline-none focus:border-pastel-pink focus:ring-1 focus:ring-pastel-pink/50
+                          transition-all">
+        </div>
+        <div>
+            <label class="text-xs text-white/50 font-medium">Contraseña</label>
+            <div class="relative mt-1">
+                <input :type="showPsw ? 'text' : 'password'" name="password" required minlength="6"
+                       class="w-full px-3 py-2 rounded-xl bg-white/10 border
+                              {% if errors|selectattr('field','equalto','password')|list %}border-red-400/60{% else %}border-white/20{% endif %}
+                              text-white text-sm placeholder:text-white/30 pr-10
+                              focus:outline-none focus:border-pastel-pink focus:ring-1 focus:ring-pastel-pink/50
+                              transition-all">
+                <button type="button" @click="showPsw = !showPsw"
+                        class="absolute right-3 top-1/2 -translate-y-1/2 text-white/40 hover:text-white/70 text-xs">
+                    <svg x-show="!showPsw" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                    </svg>
+                    <svg x-show="showPsw" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div>
+            <label class="text-xs text-white/50 font-medium">Confirmar contraseña</label>
+            <div class="relative mt-1">
+                <input :type="showConfirm ? 'text' : 'password'" name="confirm_password" required minlength="6"
+                       class="w-full px-3 py-2 rounded-xl bg-white/10 border
+                              {% if errors|selectattr('field','equalto','confirm_password')|list %}border-red-400/60{% else %}border-white/20{% endif %}
+                              text-white text-sm placeholder:text-white/30 pr-10
+                              focus:outline-none focus:border-pastel-pink focus:ring-1 focus:ring-pastel-pink/50
+                              transition-all">
+                <button type="button" @click="showConfirm = !showConfirm"
+                        class="absolute right-3 top-1/2 -translate-y-1/2 text-white/40 hover:text-white/70 text-xs">
+                    <svg x-show="!showConfirm" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                    </svg>
+                    <svg x-show="showConfirm" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        {% if errors %}
+        <div class="p-2 rounded-lg bg-red-500/10 border border-red-500/20">
+            {% for error in errors %}
+            <p class="text-xs text-red-300">{{ error.msg }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <button type="submit"
+                x-bind:disabled="loading"
+                class="w-full bg-pastel-pink text-brand-dark font-heading font-semibold text-sm
+                       px-4 py-2.5 rounded-full
+                       hover:bg-white hover:text-brand-dark transition-all duration-200 active:scale-[0.97]
+                       disabled:opacity-50 disabled:cursor-not-allowed">
+            <span x-show="!loading">Crear cuenta</span>
+            <span x-show="loading" class="inline-flex items-center gap-2">
+                <span class="w-4 h-4 border-2 border-brand-dark/30 border-t-brand-dark rounded-full animate-spin"></span>
+                Creando…
+            </span>
+        </button>
+    </form>
+
+    <p class="mt-phi text-center text-xs text-white/40">
+        ¿Ya tienes cuenta?
+        <a href="#"
+           hx-get="/auth/login"
+           hx-target="#modal-body"
+           hx-swap="innerHTML"
+           class="text-pastel-pink hover:text-white transition-colors font-medium">
+            Inicia sesión
+        </a>
+    </p>
+</div>
