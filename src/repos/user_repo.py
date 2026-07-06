@@ -1,10 +1,10 @@
-from database import Database
+from repos.interfaces import DatabaseInterface
 from models import User, UserWithPsw
 from typing import Optional
 
 
 class UserRepo:
-    def __init__(self, db: Database):
+    def __init__(self, db: DatabaseInterface):
         self.db = db
 
     async def get_by_session(self, session_id: str) -> Optional[User]:

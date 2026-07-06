@@ -6,11 +6,8 @@ from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.testclient import TestClient
 from pathlib import Path
-import sys
-
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
-
-from routes import router, get_db, ensure_session, get_current_user
+from routes import router
+from routes.deps import get_db, ensure_session, get_current_user
 from database import Database
 from fastapi.templating import Jinja2Templates
 from conftest import fake_record

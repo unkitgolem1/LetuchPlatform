@@ -1,11 +1,11 @@
-from database import Database
+from repos.interfaces import DatabaseInterface
 from models import Pedido, PedidoItem
 from decimal import Decimal
 from typing import Optional
 
 
 class OrderRepo:
-    def __init__(self, db: Database):
+    def __init__(self, db: DatabaseInterface):
         self.db = db
 
     async def create_from_cart(self, session_id: str) -> Pedido:

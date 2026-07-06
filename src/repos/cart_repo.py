@@ -1,11 +1,11 @@
-from database import Database
+from repos.interfaces import DatabaseInterface
 from models import Carrito, CarritoItem
 from decimal import Decimal
 from typing import Optional
 
 
 class CartRepo:
-    def __init__(self, db: Database):
+    def __init__(self, db: DatabaseInterface):
         self.db = db
 
     async def get_or_create_cart_id(self, session_id: str) -> str:

@@ -1,0 +1,24 @@
+# Benchmarks data (tracked in repo, not needed at runtime)
+.benchmarks/
+
+# Tests (not needed in production)
+tests/
+
+# Docs / notes
+apuntes/
+
+# Python dev artifacts
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.pyc
+*.egg-info
+
+# Env files (contain secrets)
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/

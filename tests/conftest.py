@@ -1,8 +1,3 @@
-import sys
-from pathlib import Path
-
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
-
 import pytest
 from unittest.mock import AsyncMock, MagicMock
 from typing import Any
@@ -14,7 +9,8 @@ from database import Database
 from models import User, UserWithPsw, Carrito, CarritoItem, Pedido, PedidoItem
 from repos.user_repo import UserRepo
 from repos.cart_repo import CartRepo
-from repos.product_repo import ProductRepo, SLUG_TO_CATEGORIA, CATEGORIA_TO_NOMBRE
+from repos.product_repo import ProductRepo
+from config import SLUG_TO_CATEGORIA, CATEGORIA_TO_NOMBRE
 from repos.order_repo import OrderRepo
 from auth import hash_password, verify_password
 from forms import RegisterForm, LoginForm

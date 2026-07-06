@@ -2,7 +2,8 @@
 
 import pytest
 from unittest.mock import AsyncMock
-from repos.product_repo import ProductRepo, SLUG_TO_CATEGORIA, CATEGORIA_TO_NOMBRE
+from repos.product_repo import ProductRepo
+from config import SLUG_TO_CATEGORIA, CATEGORIA_TO_NOMBRE
 from tests.conftest import fake_record
 
 
