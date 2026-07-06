@@ -1,69 +1,69 @@
-<div class="animate-hx-fade-in text-white/80">
+<div class="animate-hx-fade-in text-lotus-rosy">
     <div class="flex items-center justify-center mb-phi-2">
-        <div class="w-14 h-14 rounded-full bg-pastel-pink/20 flex items-center justify-center">
-            <svg class="w-7 h-7 text-pastel-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="w-14 h-14 rounded-full bg-lotus-rosy/20 flex items-center justify-center">
+            <svg class="w-7 h-7 text-lotus-rosy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
             </svg>
         </div>
     </div>
-    <h2 class="font-heading text-phi-1 font-bold text-white text-center">Pedido confirmado</h2>
-    <p class="text-white/50 text-sm text-center mt-1">Gracias por tu compra</p>
+    <h2 class="font-heading text-phi-1 font-bold text-lotus-rosy text-center">Pedido confirmado</h2>
+    <p class="text-lotus-rosy/50 text-sm text-center mt-1">Gracias por tu compra</p>
 
-    <div class="mt-phi-2 p-3 rounded-xl bg-white/5 border border-white/10 text-xs space-y-1">
+    <div class="mt-phi-2 p-3 rounded-xl bg-lotus-beige border border-lotus-dark/10 text-xs space-y-1">
         <div class="flex justify-between">
-            <span class="text-white/40">Pedido</span>
-            <span class="text-white font-mono">{{ pedido.id_pedido[:8] }}…</span>
+            <span class="text-lotus-rosy/40">Pedido</span>
+            <span class="text-lotus-rosy font-mono">{{ pedido.id_pedido[:8] }}…</span>
         </div>
         {% if pedido.fecha %}
         <div class="flex justify-between">
-            <span class="text-white/40">Fecha</span>
-            <span class="text-white">{{ pedido.fecha }}</span>
+            <span class="text-lotus-rosy/40">Fecha</span>
+            <span class="text-lotus-rosy">{{ pedido.fecha }}</span>
         </div>
         {% endif %}
         <div class="flex justify-between">
-            <span class="text-white/40">Estado</span>
-            <span class="text-pastel-pink font-semibold">{{ pedido.estado_label }}</span>
+            <span class="text-lotus-rosy/40">Estado</span>
+            <span class="text-lotus-rosy font-semibold">{{ pedido.estado_label }}</span>
         </div>
     </div>
 
     <div class="mt-phi space-y-2">
-        <h3 class="font-heading text-sm font-semibold text-white">Detalle</h3>
+        <h3 class="font-heading text-sm font-semibold text-lotus-rosy">Detalle</h3>
         {% for item in pedido.items %}
-        <div class="flex items-center justify-between py-1.5 border-b border-white/5 last:border-0">
+        <div class="flex items-center justify-between py-1.5 border-b border-lotus-dark/10 last:border-0">
             <div class="flex items-center gap-2 min-w-0">
                 {% if item.imagen %}
                 <img src="{{ item.imagen }}" alt="{{ item.titulo }}" class="w-8 h-8 rounded-lg object-cover shrink-0">
                 {% endif %}
                 <div class="min-w-0">
-                    <p class="text-sm text-white truncate">{{ item.titulo }}</p>
-                    <p class="text-[10px] text-white/40">{{ item.cantidad }} x S/ {{ "%.2f"|format(item.precio_unitario) }}</p>
+                    <p class="text-sm text-lotus-rosy truncate">{{ item.titulo }}</p>
+                    <p class="text-[10px] text-lotus-rosy/40">{{ item.cantidad }} x S/ {{ "%.2f"|format(item.precio_unitario) }}</p>
                 </div>
             </div>
-            <span class="text-sm font-semibold text-white shrink-0 ml-2">S/ {{ "%.2f"|format(item.subtotal) }}</span>
+            <span class="text-sm font-semibold text-lotus-rosy shrink-0 ml-2">S/ {{ "%.2f"|format(item.subtotal) }}</span>
         </div>
         {% endfor %}
     </div>
 
-    <div class="mt-phi pt-phi border-t border-white/10 flex items-center justify-between">
-        <span class="text-sm text-white/60 font-medium">Total</span>
-        <span class="text-lg font-bold text-pastel-pink">S/ {{ "%.2f"|format(pedido.total) }}</span>
+    <div class="mt-phi pt-phi border-t border-lotus-dark/10 flex items-center justify-between">
+        <span class="text-sm text-lotus-rosy/60 font-medium">Total</span>
+        <span class="text-lg font-bold text-lotus-rosy">S/ {{ "%.2f"|format(pedido.total) }}</span>
     </div>
 
     <button hx-post="/pagar"
             hx-vals='{"order_id":"{{ pedido.id_pedido }}"}'
             hx-target="#modal-body"
             hx-swap="innerHTML"
-            class="w-full mt-phi-2 bg-pastel-pink text-brand-dark font-heading font-semibold text-sm
+            class="w-full mt-phi-2 bg-lotus-rosy text-white font-heading font-semibold text-sm
                    px-4 py-2.5 rounded-full
-                   hover:bg-white hover:text-brand-dark transition-all duration-200 active:scale-[0.97]">
+                   hover:bg-lotus-dark hover:text-lotus-rosy transition-all duration-200 active:scale-[0.97]">
         Pagar ahora — S/ {{ "%.2f"|format(pedido.total) }}
     </button>
     <button hx-get="/carrito"
             hx-target="#modal-body"
             hx-swap="innerHTML"
-            class="w-full mt-2 bg-white/10 text-white font-heading font-semibold text-sm
-                   px-4 py-2.5 rounded-full border border-white/20
-                   hover:bg-white hover:text-brand-dark transition-all duration-200 active:scale-[0.97]">
+            class="w-full mt-2 bg-lotus-dark/10 text-lotus-rosy font-heading font-semibold text-sm
+                   px-4 py-2.5 rounded-full border border-lotus-dark/20
+                   hover:bg-lotus-dark hover:text-white transition-all duration-200 active:scale-[0.97]">
         Seguir comprando
     </button>
 </div>

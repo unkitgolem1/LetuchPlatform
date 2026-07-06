@@ -1,5 +1,5 @@
-<div class="animate-hx-fade-in text-white/80" x-data="{ showPsw: false, loading: false }">
-    <h2 class="font-heading text-phi-2 font-bold text-white mb-phi">Iniciar sesión</h2>
+<div class="animate-hx-fade-in text-lotus-rosy" x-data="{ showPsw: false, loading: false }">
+    <h2 class="font-heading text-phi-2 font-bold text-lotus-rosy mb-phi">Iniciar sesión</h2>
 
     <form hx-post="/auth/login"
           hx-target="#modal-body"
@@ -8,25 +8,25 @@
           hx-on::after-request="loading = false"
           class="space-y-3">
         <div>
-            <label class="text-xs text-white/50 font-medium">Email</label>
+            <label class="text-xs text-lotus-rosy/60 font-medium">Email</label>
             <input type="email" name="email" required
-                   class="w-full mt-1 px-3 py-2 rounded-xl bg-white/10 border
-                          {% if errors|selectattr('field','equalto','email')|list %}border-red-400/60{% else %}border-white/20{% endif %}
-                          text-white text-sm placeholder:text-white/30
-                          focus:outline-none focus:border-pastel-pink focus:ring-1 focus:ring-pastel-pink/50
+                   class="w-full mt-1 px-3 py-2 rounded-xl bg-white border
+                          {% if errors|selectattr('field','equalto','email')|list %}border-red-400/60{% else %}border-lotus-dark/20{% endif %}
+                          text-lotus-rosy text-sm placeholder:text-lotus-rosy/30
+                          focus:outline-none focus:border-lotus-rosy focus:ring-1 focus:ring-lotus-rosy/50
                           transition-all">
         </div>
         <div>
-            <label class="text-xs text-white/50 font-medium">Contraseña</label>
+            <label class="text-xs text-lotus-rosy/60 font-medium">Contraseña</label>
             <div class="relative mt-1">
                 <input :type="showPsw ? 'text' : 'password'" name="password" required
-                       class="w-full px-3 py-2 rounded-xl bg-white/10 border
-                              {% if errors|selectattr('field','equalto','password')|list %}border-red-400/60{% else %}border-white/20{% endif %}
-                              text-white text-sm placeholder:text-white/30 pr-10
-                              focus:outline-none focus:border-pastel-pink focus:ring-1 focus:ring-pastel-pink/50
+                       class="w-full px-3 py-2 rounded-xl bg-white border
+                              {% if errors|selectattr('field','equalto','password')|list %}border-red-400/60{% else %}border-lotus-dark/20{% endif %}
+                              text-lotus-rosy text-sm placeholder:text-lotus-rosy/30 pr-10
+                              focus:outline-none focus:border-lotus-rosy focus:ring-1 focus:ring-lotus-rosy/50
                               transition-all">
                 <button type="button" @click="showPsw = !showPsw"
-                        class="absolute right-3 top-1/2 -translate-y-1/2 text-white/40 hover:text-white/70 text-xs">
+                        class="absolute right-3 top-1/2 -translate-y-1/2 text-lotus-rosy/40 hover:text-lotus-rosy/70 text-xs">
                     <svg x-show="!showPsw" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
@@ -48,25 +48,25 @@
 
         <button type="submit"
                 x-bind:disabled="loading"
-                class="w-full bg-pastel-pink text-brand-dark font-heading font-semibold text-sm
+                class="w-full bg-lotus-rosy text-white font-heading font-semibold text-sm
                        px-4 py-2.5 rounded-full
-                       hover:bg-white hover:text-brand-dark transition-all duration-200 active:scale-[0.97]
+                       hover:bg-lotus-dark hover:text-lotus-rosy transition-all duration-200 active:scale-[0.97]
                        disabled:opacity-50 disabled:cursor-not-allowed">
             <span x-show="!loading">Entrar</span>
             <span x-show="loading" class="inline-flex items-center gap-2">
-                <span class="w-4 h-4 border-2 border-brand-dark/30 border-t-brand-dark rounded-full animate-spin"></span>
+                <span class="w-4 h-4 border-2 border-lotus-dark/30 border-t-lotus-dark rounded-full animate-spin"></span>
                 Entrando…
             </span>
         </button>
     </form>
 
-    <p class="mt-phi text-center text-xs text-white/40">
+    <p class="mt-phi text-center text-xs text-lotus-rosy/40">
         ¿No tienes cuenta?
         <a href="#"
            hx-get="/auth/register"
            hx-target="#modal-body"
            hx-swap="innerHTML"
-           class="text-pastel-pink hover:text-white transition-colors font-medium">
+           class="text-lotus-rosy hover:text-white transition-colors font-medium">
             Regístrate
         </a>
     </p>

@@ -15,7 +15,7 @@ class Database:
                 "Ponla en .env o en la variable de entorno."
             )
         self.pool = await asyncpg.create_pool(
-            dsn, min_size=2, max_size=10, ssl="require"
+            dsn, min_size=0, max_size=3, ssl="require"
         )
 
     async def disconnect(self):

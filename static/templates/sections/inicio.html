@@ -5,80 +5,79 @@
 {% block content %}
 
 <div id="inicio-content"
-     x-data="{ active: 'pan-dulce', catTitle: 'Pan Dulce', loaded: false }"
-     x-init="if (!loaded) { loaded = true; htmx.ajax('GET', '/api/productos/pan-dulce', {target:'#vitrina', swap:'innerHTML'}) }">
+     x-data="{ active: 'platillos', catTitle: 'Platillos', loaded: false }"
+     x-init="if (!loaded) { loaded = true; htmx.ajax('GET', '/api/productos/platillos', {target:'#vitrina', swap:'innerHTML'}) }">
 
     <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-4 md:mb-5 px-4">
         <button @click="active='pan-dulce'; catTitle='Pan Dulce'"
                 :class="active === 'pan-dulce'
-                    ? 'bg-pastel-pink text-brand-dark shadow-[0_0_16px_rgba(242,182,198,0.4)]'
-                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'"
+                    ? 'bg-lotus-rosy text-lotus-beige shadow-[0_0_16px_rgba(211,150,140,0.4)]'
+                    : 'bg-white text-lotus-dark hover:bg-lotus-dark/10'"
                 hx-get="/api/productos/pan-dulce" hx-target="#vitrina" hx-swap="innerHTML"
                 class="px-5 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-heading font-semibold
-                       transition-all duration-200 active:scale-95 border border-white/10
-                       focus:outline-none focus:ring-2 focus:ring-pastel-pink/50">
+                       transition-all duration-200 active:scale-95 border-2 border-lotus-dark
+                       focus:outline-none focus:ring-2 focus:ring-lotus-rosy/50 shadow-lotus-box">
             Pan Dulce
         </button>
         <button @click="active='pan-salado'; catTitle='Pan Salado'"
                 :class="active === 'pan-salado'
-                    ? 'bg-pastel-pink text-brand-dark shadow-[0_0_16px_rgba(242,182,198,0.4)]'
-                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'"
+                    ? 'bg-lotus-rosy text-lotus-beige shadow-[0_0_16px_rgba(211,150,140,0.4)]'
+                    : 'bg-white text-lotus-dark hover:bg-lotus-dark/10'"
                 hx-get="/api/productos/pan-salado" hx-target="#vitrina" hx-swap="innerHTML"
                 class="px-5 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-heading font-semibold
-                       transition-all duration-200 active:scale-95 border border-white/10
-                       focus:outline-none focus:ring-2 focus:ring-pastel-pink/50">
+                       transition-all duration-200 active:scale-95 border-2 border-lotus-dark
+                       focus:outline-none focus:ring-2 focus:ring-lotus-rosy/50 shadow-lotus-box">
             Pan Salado
         </button>
         <button @click="active='platillos'; catTitle='Platillos'"
                 :class="active === 'platillos'
-                    ? 'bg-pastel-pink text-brand-dark shadow-[0_0_16px_rgba(242,182,198,0.4)]'
-                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'"
+                    ? 'bg-lotus-rosy text-lotus-beige shadow-[0_0_16px_rgba(211,150,140,0.4)]'
+                    : 'bg-white text-lotus-dark hover:bg-lotus-dark/10'"
                 hx-get="/api/productos/platillos" hx-target="#vitrina" hx-swap="innerHTML"
                 class="px-5 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-heading font-semibold
-                       transition-all duration-200 active:scale-95 border border-white/10
-                       focus:outline-none focus:ring-2 focus:ring-pastel-pink/50">
+                       transition-all duration-200 active:scale-95 border-2 border-lotus-dark
+                       focus:outline-none focus:ring-2 focus:ring-lotus-rosy/50 shadow-lotus-box">
             Platillos
         </button>
         <button @click="active='bebidas'; catTitle='Bebidas'"
                 :class="active === 'bebidas'
-                    ? 'bg-pastel-pink text-brand-dark shadow-[0_0_16px_rgba(242,182,198,0.4)]'
-                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'"
+                    ? 'bg-lotus-rosy text-lotus-beige shadow-[0_0_16px_rgba(211,150,140,0.4)]'
+                    : 'bg-white text-lotus-dark hover:bg-lotus-dark/10'"
                 hx-get="/api/productos/bebidas" hx-target="#vitrina" hx-swap="innerHTML"
                 class="px-5 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-heading font-semibold
-                       transition-all duration-200 active:scale-95 border border-white/10
-                       focus:outline-none focus:ring-2 focus:ring-pastel-pink/50">
+                       transition-all duration-200 active:scale-95 border-2 border-lotus-dark
+                       focus:outline-none focus:ring-2 focus:ring-lotus-rosy/50 shadow-lotus-box">
             Bebidas
         </button>
         <button @click="active='productos-locales'; catTitle='Productos Locales'"
                 :class="active === 'productos-locales'
-                    ? 'bg-pastel-pink text-brand-dark shadow-[0_0_16px_rgba(242,182,198,0.4)]'
-                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'"
+                    ? 'bg-lotus-rosy text-lotus-beige shadow-[0_0_16px_rgba(211,150,140,0.4)]'
+                    : 'bg-white text-lotus-dark hover:bg-lotus-dark/10'"
                 hx-get="/api/productos/productos-locales" hx-target="#vitrina" hx-swap="innerHTML"
                 class="px-5 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-heading font-semibold
-                       transition-all duration-200 active:scale-95 border border-white/10
-                       focus:outline-none focus:ring-2 focus:ring-pastel-pink/50">
+                       transition-all duration-200 active:scale-95 border-2 border-lotus-dark
+                       focus:outline-none focus:ring-2 focus:ring-lotus-rosy/50 shadow-lotus-box">
             Productos Locales
         </button>
     </div>
 
-    <div id="content-area"
-         class="animate-hx-fade-in text-white/80 min-h-[50vh] rounded-2xl
-                bg-[rgba(29,93,115,0.25)] backdrop-blur-[16px]
-                border border-[rgba(200,220,240,0.12)]
-                shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]
+     <div id="content-area"
+          class="animate-hx-fade-in text-lotus-dark min-h-[50vh]
+                bg-lotus-beige
+                border-4 border-lotus-dark
                 p-phi md:p-phi-2">
         <div class="text-center mb-phi-3 md:mb-phi-4">
-            <h2 class="font-heading text-phi-2 md:text-phi-3 font-bold text-white leading-[1.1]"
+            <h2 class="font-heading text-phi-2 md:text-phi-3 font-bold uppercase text-lotus-dark leading-[1.1]"
                 x-text="catTitle"
                 x-ref="catTitle">Pan Dulce</h2>
-            <div class="w-[61.8%] md:w-[38.2%] h-0.5 bg-white/20 mx-auto mt-4 mb-4"></div>
+            <div class="w-full h-1 bg-lotus-dark mx-auto mt-4 mb-4 shadow-lotus-box"></div>
         </div>
 
         <div id="vitrina"
              hx-swap="innerHTML"
              class="min-h-[200px]">
             <div class="flex items-center justify-center h-48">
-                <div class="w-6 h-6 border-2 border-pastel-pink border-t-transparent rounded-full animate-spin"></div>
+                <div class="w-6 h-6 border-2 border-lotus-rosy border-t-transparent rounded-full animate-spin"></div>
             </div>
         </div>
     </div>

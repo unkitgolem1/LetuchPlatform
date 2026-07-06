@@ -1,0 +1,30 @@
+{
+  "name": "letuchwebsite",
+  "version": "1.0.0",
+  "description": "Letuch — Panadería artesanal web app. FastAPI + Jinja2 + Tailwind CSS + HTMX + Alpine.js",
+  "main": "tailwind.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build:css": "tailwindcss -i ./static/css/styles.css -o ./static/css/output.css --minify",
+    "watch:css": "tailwindcss -i ./static/css/styles.css -o ./static/css/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unkitgolem1/LetuchPlatform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unkitgolem1/LetuchPlatform/issues"
+  },
+  "homepage": "https://github.com/unkitgolem1/LetuchPlatform#readme",
+  "dependencies": {
+    "autoprefixer": "^10.5.2",
+    "postcss": "^8.5.16",
+    "tailwindcss": "^3.4.19"
+  }
+}

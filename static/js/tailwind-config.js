@@ -2,24 +2,11 @@ tailwind.config = {
     theme: {
         extend: {
             colors: {
-                brand: {
-                    DEFAULT: '#1D5D73',
-                    dark: '#0F2D38',
-                    light: '#C8C275',
-                },
-                wine: '#731D33',
-                olive: '#736D1D',
-                'old-gold': '#C8C275',
-                'pastel-pink': '#F2B6C6',
-                'hero-green': '#57984F',
-                'glass-bg': 'rgba(29, 93, 115, 0.25)',
-                'glass-hover': 'rgba(29, 93, 115, 0.35)',
-                'glass-border': 'rgba(200, 220, 240, 0.12)',
-                'glass-border-hover': 'rgba(200, 220, 240, 0.25)',
-                'glass-modal': 'rgba(29, 93, 115, 0.35)',
-                'glass-modal-border': 'rgba(200, 220, 240, 0.2)',
-                'glass-footer': 'rgba(29, 93, 115, 0.15)',
-                'glass-footer-border': 'rgba(200, 220, 240, 0.08)',
+                'lotus-dark': '#0A3323',
+                'lotus-moss': '#839958',
+                'lotus-beige': '#F7F4D5',
+                'lotus-rosy': '#D3968C',
+                'lotus-midnight': '#105666',
             },
             spacing: {
                 'phi': '1.618rem',
@@ -36,7 +23,7 @@ tailwind.config = {
                 'phi-4': ['6.854rem', { lineHeight: '1.1' }],
             },
             fontFamily: {
-                'sans': ['Satoshi', 'system-ui', '-apple-system', 'sans-serif'],
+                'sans': ['Inter', 'Helvetica Neue', 'system-ui', 'sans-serif'],
                 'heading': ['archivo-black', 'system-ui', '-apple-system', 'sans-serif'],
             },
             maxWidth: {

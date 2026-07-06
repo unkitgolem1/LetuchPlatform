@@ -5,54 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}LetuchWebSite{% endblock %}</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="{{ url_for('static', path='js/tailwind-config.js') }}"></script>
+    <link href="{{ url_for('static', path='css/output.css') }}?v=2" rel="stylesheet">
     <script src="https://unpkg.com/htmx.org@2.0.4"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <link rel="stylesheet" href="https://use.typekit.net/fbd7suu.css">
+
+    <style>
+        .text-shadow-lotus {
+            text-shadow: 2px 2px 0 #0A3323, 5px 5px 0 rgba(10,51,35,0.4), 0 0 20px rgba(211,150,140,0.3), 0 0 60px rgba(211,150,140,0.15);
+        }
+        .shadow-lotus-box {
+            box-shadow: 2px 2px 0 #0A3323, 5px 5px 0 rgba(10,51,35,0.4), 0 0 20px rgba(211,150,140,0.3);
+        }
+    </style>
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
 
     {% block extra_head %}{% endblock %}
 </head>
-<body class="bg-[#C8C275] min-h-screen font-sans antialiased leading-[1.618]">
+<body class="bg-lotus-beige min-h-screen font-sans antialiased leading-[1.618]">
 
     <!-- ─── Perlas rosas flotando ─── -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
         <div x-data="{ x: 15, y: 20, dx: 0.12, dy: -0.1 }"
              x-init="setInterval(()=>{x+=dx;y+=dy;if(x<0||x>100)dx=-dx;if(y<0||y>100)dy=-dy;$el.style.left=x+'%';$el.style.top=y+'%'},60)"
-             class="absolute w-48 h-48 md:w-64 md:h-64 rounded-full bg-[#F2B6C6] opacity-40 blur-[80px] -translate-x-1/2 -translate-y-1/2"></div>
+             class="absolute w-48 h-48 md:w-64 md:h-64 rounded-full bg-lotus-rosy opacity-40 blur-[80px] -translate-x-1/2 -translate-y-1/2"></div>
         <div x-data="{ x: 75, y: 30, dx: -0.1, dy: 0.15 }"
              x-init="setInterval(()=>{x+=dx;y+=dy;if(x<0||x>100)dx=-dx;if(y<0||y>100)dy=-dy;$el.style.left=x+'%';$el.style.top=y+'%'},60)"
-             class="absolute w-40 h-40 md:w-56 md:h-56 rounded-full bg-[#F2B6C6] opacity-35 blur-[70px] -translate-x-1/2 -translate-y-1/2"></div>
+             class="absolute w-40 h-40 md:w-56 md:h-56 rounded-full bg-lotus-rosy opacity-35 blur-[70px] -translate-x-1/2 -translate-y-1/2"></div>
         <div x-data="{ x: 50, y: 70, dx: 0.08, dy: -0.12 }"
              x-init="setInterval(()=>{x+=dx;y+=dy;if(x<0||x>100)dx=-dx;if(y<0||y>100)dy=-dy;$el.style.left=x+'%';$el.style.top=y+'%'},60)"
-             class="absolute w-36 h-36 md:w-48 md:h-48 rounded-full bg-[#F2B6C6] opacity-30 blur-[60px] -translate-x-1/2 -translate-y-1/2"></div>
+             class="absolute w-36 h-36 md:w-48 md:h-48 rounded-full bg-lotus-rosy opacity-30 blur-[60px] -translate-x-1/2 -translate-y-1/2"></div>
         <div x-data="{ x: 85, y: 80, dx: -0.08, dy: 0.1 }"
              x-init="setInterval(()=>{x+=dx;y+=dy;if(x<0||x>100)dx=-dx;if(y<0||y>100)dy=-dy;$el.style.left=x+'%';$el.style.top=y+'%'},60)"
-             class="absolute w-32 h-32 md:w-44 md:h-44 rounded-full bg-[#F2B6C6] opacity-25 blur-[50px] -translate-x-1/2 -translate-y-1/2"></div>
+             class="absolute w-32 h-32 md:w-44 md:h-44 rounded-full bg-lotus-rosy opacity-25 blur-[50px] -translate-x-1/2 -translate-y-1/2"></div>
         <div x-data="{ x: 25, y: 55, dx: 0.15, dy: 0.08 }"
              x-init="setInterval(()=>{x+=dx;y+=dy;if(x<0||x>100)dx=-dx;if(y<0||y>100)dy=-dy;$el.style.left=x+'%';$el.style.top=y+'%'},60)"
-             class="absolute w-44 h-44 md:w-60 md:h-60 rounded-full bg-[#F2B6C6] opacity-20 blur-[75px] -translate-x-1/2 -translate-y-1/2"></div>
+             class="absolute w-44 h-44 md:w-60 md:h-60 rounded-full bg-lotus-rosy opacity-20 blur-[75px] -translate-x-1/2 -translate-y-1/2"></div>
     </div>
 
 <!-- ═══════════════════════════════════════════
      HERO
      ═══════════════════════════════════════════ -->
 <section id="hero"
-           class="relative h-screen w-full flex items-center justify-center overflow-hidden"
-         style="background: linear-gradient(135deg, #57984F 0%, #3D7A36 50%, #2D5F27 100%);">
+           class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-lotus-moss">
 
     <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
         <div x-data="{ x: 20, y: 30, dx: 0.2, dy: -0.15 }"
              x-init="setInterval(()=>{x+=dx;y+=dy;if(x<0||x>100)dx=-dx;if(y<0||y>100)dy=-dy;$el.style.left=x+'%';$el.style.top=y+'%'},60)"
-             class="absolute w-72 h-72 md:w-96 md:h-96 rounded-full bg-[#F2B6C6] opacity-30 blur-[120px] -translate-x-1/2 -translate-y-1/2"></div>
+             class="absolute w-72 h-72 md:w-96 md:h-96 rounded-full bg-lotus-rosy opacity-30 blur-[120px] -translate-x-1/2 -translate-y-1/2"></div>
         <div x-data="{ x: 80, y: 60, dx: -0.15, dy: 0.2 }"
              x-init="setInterval(()=>{x+=dx;y+=dy;if(x<0||x>100)dx=-dx;if(y<0||y>100)dy=-dy;$el.style.left=x+'%';$el.style.top=y+'%'},60)"
-             class="absolute w-96 h-96 md:w-[28rem] md:h-[28rem] rounded-full bg-[#57984F] opacity-20 blur-[140px] -translate-x-1/2 -translate-y-1/2"></div>
+             class="absolute w-96 h-96 md:w-[28rem] md:h-[28rem] rounded-full bg-lotus-moss opacity-20 blur-[140px] -translate-x-1/2 -translate-y-1/2"></div>
         <div x-data="{ x: 50, y: 20, dx: 0.1, dy: 0.25 }"
-             x-init="setInterval(()=>{x+=dx;y+=dy;if(x<0||x>100)dx=-dx;if(y<0||y>100)dy=-dy;$el.style.left=x+'%';$el.style.top=y+'%'},60)"
-             class="absolute w-64 h-64 md:w-80 md:h-80 rounded-full bg-[#F2B6C6] opacity-15 blur-[100px] -translate-x-1/2 -translate-y-1/2"></div>
+             x-init="setInterval(()=>{x+=dx;y+=dy;if(x<0||x>100)dx=-dx;if(y<0||y>100)dy=-dy;$el.style.left=x+'%;$el.style.top=y+'%'},60)"
+             class="absolute w-64 h-64 md:w-80 md:h-80 rounded-full bg-lotus-rosy opacity-15 blur-[100px] -translate-x-1/2 -translate-y-1/2"></div>
         <div x-data="{ x: 30, y: 80, dx: 0.18, dy: -0.12 }"
              x-init="setInterval(()=>{x+=dx;y+=dy;if(x<0||x>100)dx=-dx;if(y<0||y>100)dy=-dy;$el.style.left=x+'%';$el.style.top=y+'%'},60)"
              class="absolute w-56 h-56 md:w-72 md:h-72 rounded-full bg-white opacity-10 blur-[90px] -translate-x-1/2 -translate-y-1/2"></div>
@@ -61,31 +68,31 @@
     <div class="absolute bottom-0 left-0 right-0 flex justify-center z-[1] pointer-events-none overflow-hidden [contain:layout_style_paint]">
         <div class="mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 xl:max-w-[1440px] flex items-end justify-around h-36 md:h-44">
             <svg x-data="{ sway: 3 }" x-init="setInterval(() => $el.style.transform = 'rotate(' + (Math.sin(Date.now()/477) * sway) + 'deg)', 50)" style="transform-origin:bottom center" class="w-7 h-28 md:h-36" viewBox="0 0 14 60" fill="none">
-                <path x-init="let l=$el.getTotalLength();Object.assign($el.style,{strokeDasharray:l,strokeDashoffset:l});requestAnimationFrame(()=>{$el.style.transition='stroke-dashoffset 2s ease-out';$el.style.strokeDashoffset='0'})" d="M7,60 Q4,42 9,24 Q11,12 7,0" stroke="#F2B6C6" stroke-width="1.2" fill="none"/>
-                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M7,36 Q13,31 14,36 Q13,41 7,36Z" fill="#F2B6C6"/>
-                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M8,16 Q2,11 1,16 Q2,21 8,16Z" fill="#F2B6C6"/>
+                <path x-init="let l=$el.getTotalLength();Object.assign($el.style,{strokeDasharray:l,strokeDashoffset:l});requestAnimationFrame(()=>{$el.style.transition='stroke-dashoffset 2s ease-out';$el.style.strokeDashoffset='0'})" d="M7,60 Q4,42 9,24 Q11,12 7,0" stroke="#D3968C" stroke-width="1.2" fill="none"/>
+                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M7,36 Q13,31 14,36 Q13,41 7,36Z" fill="#D3968C"/>
+                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M8,16 Q2,11 1,16 Q2,21 8,16Z" fill="#D3968C"/>
             </svg>
             <svg x-data="{ sway: -2 }" x-init="setInterval(() => $el.style.transform = 'rotate(' + (Math.sin(Date.now()/477) * sway) + 'deg)', 50)" style="transform-origin:bottom center" class="w-7 h-24 md:h-32" viewBox="0 0 14 54" fill="none">
-                <path x-init="let l=$el.getTotalLength();Object.assign($el.style,{strokeDasharray:l,strokeDashoffset:l});requestAnimationFrame(()=>{$el.style.transition='stroke-dashoffset 2s ease-out';$el.style.strokeDashoffset='0'})" d="M7,54 Q10,38 4,22 Q2,12 7,0" stroke="#F2B6C6" stroke-width="1.2" fill="none"/>
-                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M6,32 Q1,27 0,32 Q1,37 6,32Z" fill="#F2B6C6"/>
+                <path x-init="let l=$el.getTotalLength();Object.assign($el.style,{strokeDasharray:l,strokeDashoffset:l});requestAnimationFrame(()=>{$el.style.transition='stroke-dashoffset 2s ease-out';$el.style.strokeDashoffset='0'})" d="M7,54 Q10,38 4,22 Q2,12 7,0" stroke="#D3968C" stroke-width="1.2" fill="none"/>
+                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M6,32 Q1,27 0,32 Q1,37 6,32Z" fill="#D3968C"/>
             </svg>
             <svg x-data="{ sway: -1 }" x-init="setInterval(() => $el.style.transform = 'rotate(' + (Math.sin(Date.now()/477) * sway) + 'deg)', 50)" style="transform-origin:bottom center" class="w-7 h-36 md:h-44" viewBox="0 0 14 66" fill="none">
-                <path x-init="let l=$el.getTotalLength();Object.assign($el.style,{strokeDasharray:l,strokeDashoffset:l});requestAnimationFrame(()=>{$el.style.transition='stroke-dashoffset 2s ease-out';$el.style.strokeDashoffset='0'})" d="M7,66 Q4,48 10,30 Q12,16 7,0" stroke="#F2B6C6" stroke-width="1.2" fill="none"/>
-                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M7,44 Q13,39 14,44 Q13,49 7,44Z" fill="#F2B6C6"/>
-                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M8,22 Q2,17 1,22 Q2,27 8,22Z" fill="#F2B6C6"/>
+                <path x-init="let l=$el.getTotalLength();Object.assign($el.style,{strokeDasharray:l,strokeDashoffset:l});requestAnimationFrame(()=>{$el.style.transition='stroke-dashoffset 2s ease-out';$el.style.strokeDashoffset='0'})" d="M7,66 Q4,48 10,30 Q12,16 7,0" stroke="#D3968C" stroke-width="1.2" fill="none"/>
+                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M7,44 Q13,39 14,44 Q13,49 7,44Z" fill="#D3968C"/>
+                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M8,22 Q2,17 1,22 Q2,27 8,22Z" fill="#D3968C"/>
             </svg>
             <svg x-data="{ sway: 2 }" x-init="setInterval(() => $el.style.transform = 'rotate(' + (Math.sin(Date.now()/477) * sway) + 'deg)', 50)" style="transform-origin:bottom center" class="w-7 h-28 md:h-36" viewBox="0 0 14 56" fill="none">
-                <path x-init="let l=$el.getTotalLength();Object.assign($el.style,{strokeDasharray:l,strokeDashoffset:l});requestAnimationFrame(()=>{$el.style.transition='stroke-dashoffset 2s ease-out';$el.style.strokeDashoffset='0'})" d="M7,56 Q10,40 4,24 Q2,14 7,0" stroke="#F2B6C6" stroke-width="1.2" fill="none"/>
-                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M8,36 Q13,31 14,36 Q13,41 8,36Z" fill="#F2B6C6"/>
+                <path x-init="let l=$el.getTotalLength();Object.assign($el.style,{strokeDasharray:l,strokeDashoffset:l});requestAnimationFrame(()=>{$el.style.transition='stroke-dashoffset 2s ease-out';$el.style.strokeDashoffset='0'})" d="M7,56 Q10,40 4,24 Q2,14 7,0" stroke="#D3968C" stroke-width="1.2" fill="none"/>
+                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M8,36 Q13,31 14,36 Q13,41 8,36Z" fill="#D3968C"/>
             </svg>
             <svg x-data="{ sway: -3 }" x-init="setInterval(() => $el.style.transform = 'rotate(' + (Math.sin(Date.now()/477) * sway) + 'deg)', 50)" style="transform-origin:bottom center" class="w-7 h-32 md:h-40" viewBox="0 0 14 62" fill="none">
-                <path x-init="let l=$el.getTotalLength();Object.assign($el.style,{strokeDasharray:l,strokeDashoffset:l});requestAnimationFrame(()=>{$el.style.transition='stroke-dashoffset 2s ease-out';$el.style.strokeDashoffset='0'})" d="M7,62 Q4,44 10,26 Q12,14 7,0" stroke="#F2B6C6" stroke-width="1.2" fill="none"/>
-                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M6,38 Q1,33 0,38 Q1,43 6,38Z" fill="#F2B6C6"/>
-                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M8,18 Q14,13 15,18 Q14,23 8,18Z" fill="#F2B6C6"/>
+                <path x-init="let l=$el.getTotalLength();Object.assign($el.style,{strokeDasharray:l,strokeDashoffset:l});requestAnimationFrame(()=>{$el.style.transition='stroke-dashoffset 2s ease-out';$el.style.strokeDashoffset='0'})" d="M7,62 Q4,44 10,26 Q12,14 7,0" stroke="#D3968C" stroke-width="1.2" fill="none"/>
+                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M6,38 Q1,33 0,38 Q1,43 6,38Z" fill="#D3968C"/>
+                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M8,18 Q14,13 15,18 Q14,23 8,18Z" fill="#D3968C"/>
             </svg>
             <svg x-data="{ sway: 1 }" x-init="setInterval(() => $el.style.transform = 'rotate(' + (Math.sin(Date.now()/477) * sway) + 'deg)', 50)" style="transform-origin:bottom center" class="w-7 h-24 md:h-32" viewBox="0 0 14 50" fill="none">
-                <path x-init="let l=$el.getTotalLength();Object.assign($el.style,{strokeDasharray:l,strokeDashoffset:l});requestAnimationFrame(()=>{$el.style.transition='stroke-dashoffset 2s ease-out';$el.style.strokeDashoffset='0'})" d="M7,50 Q10,36 4,20 Q2,10 7,0" stroke="#F2B6C6" stroke-width="1.2" fill="none"/>
-                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M7,30 Q13,25 14,30 Q13,35 7,30Z" fill="#F2B6C6"/>
+                <path x-init="let l=$el.getTotalLength();Object.assign($el.style,{strokeDasharray:l,strokeDashoffset:l});requestAnimationFrame(()=>{$el.style.transition='stroke-dashoffset 2s ease-out';$el.style.strokeDashoffset='0'})" d="M7,50 Q10,36 4,20 Q2,10 7,0" stroke="#D3968C" stroke-width="1.2" fill="none"/>
+                <path x-init="$el.style.opacity='0';requestAnimationFrame(()=>{$el.style.transition='opacity .4s ease-out';$el.style.opacity='.5'})" d="M7,30 Q13,25 14,30 Q13,35 7,30Z" fill="#D3968C"/>
             </svg>
         </div>
     </div>
@@ -99,13 +106,20 @@
             </span>
         </div>
 
-        <div class="mt-4 md:mt-6 flex justify-center">
+        <div class="flex flex-col items-center gap-3 mt-4 md:mt-6">
+            <div class="animate-bounce">
+                <svg class="w-6 h-6 md:w-7 md:h-7 text-lotus-rosy/60" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+            </div>
             <a href="#content"
                class="inline-block px-8 py-3 rounded-full
                       text-sm md:text-base font-heading font-semibold
-                      bg-pastel-pink text-brand-dark
-                      hover:bg-white hover:text-hero-green
-                      shadow-[0_0_20px_rgba(242,182,198,0.3)]
+                      bg-lotus-rosy text-lotus-beige
+                      hover:bg-lotus-dark hover:text-lotus-rosy
+                      shadow-[0_0_20px_rgba(211,150,140,0.3)]
                       hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]
                       transition-all duration-300
                       active:scale-[0.97]">
@@ -114,42 +128,32 @@
         </div>
     </div>
 
-    <div class="absolute bottom-[38.2%] left-0 right-0 flex justify-center pointer-events-none z-10">
-        <div class="animate-bounce">
-            <svg class="w-6 h-6 md:w-8 md:h-8 text-white/40" fill="none" stroke="currentColor"
-                 viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
-        </div>
-    </div>
-
     <div class="absolute bottom-0 left-0 right-0 h-20 md:h-28
-                bg-gradient-to-b from-transparent to-brand-dark/80 pointer-events-none z-[2]"></div>
+                bg-gradient-to-b from-transparent to-lotus-dark/80 pointer-events-none z-[2]"></div>
 </section>
 
     <!-- ─── NAVBAR ─── -->
     <nav x-data="{ active: location.pathname === '/' ? 'inicio' : location.pathname.replace('/section/','') || 'inicio', menuOpen: false, cartCount: 0 }"
          @scroll.window="$el.classList.toggle('shadow-[0_8px_32px_rgba(0,0,0,0.3)]', window.scrollY > 80)"
          @htmx:after-swap.window="if($event.detail.target && $event.detail.target.id==='modal-body'){const c=$event.detail.target.querySelector('.space-y-phi');cartCount=c?c.children.length:0}else{active=location.pathname==='/'?'inicio':location.pathname.replace('/section/','')||'inicio'}"
-         class="sticky top-0 w-full z-50 bg-[rgba(15,45,56,0.85)] backdrop-blur-[16px] border-b border-[rgba(200,220,240,0.1)]">
+         class="sticky top-0 w-full z-50 bg-lotus-dark/85 backdrop-blur-[16px] border-b border-[rgba(200,220,240,0.1)]">
 
         <div class="mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 xl:max-w-[1440px]">
-            <div class="grid grid-cols-3 items-center h-14 md:h-16">
+            <div class="flex items-center justify-between h-14 md:h-16">
 
                 <a href="/"
                    class="font-heading text-white font-bold text-phi-1 tracking-tight
-                          justify-self-start hover:opacity-90 transition-opacity drop-shadow-sm">
+                          hover:opacity-90 transition-opacity text-shadow-lotus">
                     Letuch
                 </a>
 
-                <ul class="hidden md:flex justify-center gap-1">
-                    <li><a href="#" @click="active='inicio'" :class="'block px-5 py-2 text-sm font-medium rounded-full transition-all ' + (active==='inicio' ? 'text-white bg-pastel-pink/25 font-semibold' : 'text-white/70 hover:text-white hover:bg-white/10')" hx-get="/section/inicio" hx-target="#content" hx-select="#inicio-content" hx-swap="innerHTML show:#content:top" hx-push-url="true">Inicio</a></li>
-                    <li><a href="#" @click="active='servicios'" :class="'block px-5 py-2 text-sm font-medium rounded-full transition-all ' + (active==='servicios' ? 'text-white bg-pastel-pink/25 font-semibold' : 'text-white/70 hover:text-white hover:bg-white/10')" hx-get="/section/servicios" hx-target="#content" hx-select="#content-area" hx-swap="innerHTML show:#content:top" hx-push-url="true">Servicios</a></li>
-                    <li><a href="#" @click="active='contacto'" :class="'block px-5 py-2 text-sm font-medium rounded-full transition-all ' + (active==='contacto' ? 'text-white bg-pastel-pink/25 font-semibold' : 'text-white/70 hover:text-white hover:bg-white/10')" hx-get="/section/contacto" hx-target="#content" hx-select="#content-area" hx-swap="innerHTML show:#content:top" hx-push-url="true">Contacto</a></li>
+                <ul class="hidden md:flex items-center gap-1">
+                    <li><a href="#" @click="active='inicio'" :class="'block px-5 py-2 text-sm font-medium rounded-full transition-all ' + (active==='inicio' ? 'text-white bg-lotus-rosy/25 font-semibold' : 'text-white/70 hover:text-white hover:bg-white/10')" hx-get="/section/inicio" hx-target="#content" hx-select="#inicio-content" hx-swap="innerHTML show:#content:top" hx-push-url="true">Inicio</a></li>
+                    <li><a href="#" @click="active='servicios'" :class="'block px-5 py-2 text-sm font-medium rounded-full transition-all ' + (active==='servicios' ? 'text-white bg-lotus-rosy/25 font-semibold' : 'text-white/70 hover:text-white hover:bg-white/10')" hx-get="/section/servicios" hx-target="#content" hx-select="#content-area" hx-swap="innerHTML show:#content:top" hx-push-url="true">Servicios</a></li>
+                    <li><a href="#" @click="active='contacto'" :class="'block px-5 py-2 text-sm font-medium rounded-full transition-all ' + (active==='contacto' ? 'text-white bg-lotus-rosy/25 font-semibold' : 'text-white/70 hover:text-white hover:bg-white/10')" hx-get="/section/contacto" hx-target="#content" hx-select="#content-area" hx-swap="innerHTML show:#content:top" hx-push-url="true">Contacto</a></li>
                 </ul>
 
-                <div class="justify-self-end flex items-center gap-1 md:gap-2">
+                <div class="flex items-center gap-1 md:gap-2">
 
                     <button hx-get="/perfil" hx-target="#modal-body" hx-swap="innerHTML" hx-on::after-request="window.dispatchEvent(new CustomEvent('open-modal'))"
                             class="text-white/70 hover:text-white p-2 rounded-full hover:bg-white/10 transition-all duration-200" aria-label="Perfil">
@@ -164,7 +168,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/>
                         </svg>
                         <span x-show="cartCount > 0" x-text="cartCount"
-                              class="absolute -top-0.5 -right-0.5 w-4.5 h-4.5 bg-pastel-pink text-brand-dark text-[9px] font-bold flex items-center justify-center rounded-full shadow-sm">0</span>
+                              class="absolute -top-0.5 -right-0.5 w-4.5 h-4.5 bg-lotus-rosy text-lotus-dark text-[9px] font-bold flex items-center justify-center rounded-full shadow-sm">0</span>
                     </button>
 
                     <button @click="menuOpen = !menuOpen"
@@ -179,11 +183,11 @@
         </div>
 
         <div x-show="menuOpen" @click.away="menuOpen = false"
-             class="md:hidden border-t border-white/10 bg-[rgba(15,45,56,0.95)] backdrop-blur-[16px]">
+             class="md:hidden border-t border-white/10 bg-lotus-dark/95 backdrop-blur-[16px]">
             <ul class="mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 xl:max-w-[1440px] py-2 space-y-1">
-                <li><a href="#" @click="active='inicio'; menuOpen=false" :class="'block px-4 py-2 text-sm font-medium rounded-lg transition-all ' + (active==='inicio' ? 'text-white bg-pastel-pink/25 font-semibold' : 'text-white/70 hover:text-white hover:bg-white/10')" hx-get="/section/inicio" hx-target="#content" hx-select="#inicio-content" hx-swap="innerHTML show:#content:top" hx-push-url="true">Inicio</a></li>
-                <li><a href="#" @click="active='servicios'; menuOpen=false" :class="'block px-4 py-2 text-sm font-medium rounded-lg transition-all ' + (active==='servicios' ? 'text-white bg-pastel-pink/25 font-semibold' : 'text-white/70 hover:text-white hover:bg-white/10')" hx-get="/section/servicios" hx-target="#content" hx-select="#content-area" hx-swap="innerHTML show:#content:top" hx-push-url="true">Servicios</a></li>
-                <li><a href="#" @click="active='contacto'; menuOpen=false" :class="'block px-4 py-2 text-sm font-medium rounded-lg transition-all ' + (active==='contacto' ? 'text-white bg-pastel-pink/25 font-semibold' : 'text-white/70 hover:text-white hover:bg-white/10')" hx-get="/section/contacto" hx-target="#content" hx-select="#content-area" hx-swap="innerHTML show:#content:top" hx-push-url="true">Contacto</a></li>
+                <li><a href="#" @click="active='inicio'; menuOpen=false" :class="'block px-4 py-2 text-sm font-medium rounded-lg transition-all ' + (active==='inicio' ? 'text-white bg-lotus-rosy/25 font-semibold' : 'text-white/70 hover:text-white hover:bg-white/10')" hx-get="/section/inicio" hx-target="#content" hx-select="#inicio-content" hx-swap="innerHTML show:#content:top" hx-push-url="true">Inicio</a></li>
+                <li><a href="#" @click="active='servicios'; menuOpen=false" :class="'block px-4 py-2 text-sm font-medium rounded-lg transition-all ' + (active==='servicios' ? 'text-white bg-lotus-rosy/25 font-semibold' : 'text-white/70 hover:text-white hover:bg-white/10')" hx-get="/section/servicios" hx-target="#content" hx-select="#content-area" hx-swap="innerHTML show:#content:top" hx-push-url="true">Servicios</a></li>
+                <li><a href="#" @click="active='contacto'; menuOpen=false" :class="'block px-4 py-2 text-sm font-medium rounded-lg transition-all ' + (active==='contacto' ? 'text-white bg-lotus-rosy/25 font-semibold' : 'text-white/70 hover:text-white hover:bg-white/10')" hx-get="/section/contacto" hx-target="#content" hx-select="#content-area" hx-swap="innerHTML show:#content:top" hx-push-url="true">Contacto</a></li>
             </ul>
         </div>
     </nav>
@@ -193,9 +197,8 @@
     </div>
 
     <!-- ─── FOOTER ─── -->
-    <footer class="w-full border-t border-[rgba(200,220,240,0.08)] py-phi-2 md:py-phi-3
-                   bg-[rgba(29,93,115,0.15)] backdrop-blur-[8px]">
-        <div class="mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 xl:max-w-[1440px] text-center text-white/50 text-sm">
+    <footer class="w-full py-phi-2 md:py-phi-3 bg-lotus-dark">
+        <div class="mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 xl:max-w-[1440px] text-center text-lotus-beige/60 text-sm">
             <p>&copy; {{ now().year if now is defined else "2026" }} LetuchWebSite. Todos los derechos reservados.</p>
         </div>
     </footer>
@@ -225,15 +228,15 @@
     <!-- ─── Loading screen (initial load) ─── -->
     <div id="loading-screen"
          class="fixed inset-0 z-[100] flex flex-col items-center justify-center gap-8
-                bg-brand-dark/85 backdrop-blur-md transition-opacity duration-300">
+                bg-lotus-midnight/85 backdrop-blur-md transition-opacity duration-300">
         <div class="w-28 h-28 md:w-36 md:h-36">
             <img src="/static/images/logo.svg" alt="Letuch"
                  class="w-full h-full invert opacity-85">
         </div>
         <div class="flex gap-2">
-            <div class="w-2 h-2 rounded-full bg-pastel-pink/70 animate-bounce-dot"></div>
-            <div class="w-2 h-2 rounded-full bg-pastel-pink/70 animate-bounce-dot" style="animation-delay:0.15s"></div>
-            <div class="w-2 h-2 rounded-full bg-pastel-pink/70 animate-bounce-dot" style="animation-delay:0.3s"></div>
+            <div class="w-2 h-2 rounded-full bg-lotus-rosy/70 animate-bounce-dot"></div>
+            <div class="w-2 h-2 rounded-full bg-lotus-rosy/70 animate-bounce-dot" style="animation-delay:0.15s"></div>
+            <div class="w-2 h-2 rounded-full bg-lotus-rosy/70 animate-bounce-dot" style="animation-delay:0.3s"></div>
         </div>
     </div>
 
@@ -246,15 +249,15 @@
          x-transition:leave-start="opacity-100"
          x-transition:leave-end="opacity-0"
          class="fixed inset-0 z-[100] flex flex-col items-center justify-center gap-8
-                bg-brand-dark/85 backdrop-blur-md">
+                bg-lotus-midnight/85 backdrop-blur-md">
         <div class="w-28 h-28 md:w-36 md:h-36">
             <img src="/static/images/logo.svg" alt="Letuch"
                  class="w-full h-full invert opacity-85">
         </div>
         <div class="flex gap-2">
-            <div class="w-2 h-2 rounded-full bg-pastel-pink/70 animate-bounce-dot"></div>
-            <div class="w-2 h-2 rounded-full bg-pastel-pink/70 animate-bounce-dot" style="animation-delay:0.15s"></div>
-            <div class="w-2 h-2 rounded-full bg-pastel-pink/70 animate-bounce-dot" style="animation-delay:0.3s"></div>
+            <div class="w-2 h-2 rounded-full bg-lotus-rosy/70 animate-bounce-dot"></div>
+            <div class="w-2 h-2 rounded-full bg-lotus-rosy/70 animate-bounce-dot" style="animation-delay:0.15s"></div>
+            <div class="w-2 h-2 rounded-full bg-lotus-rosy/70 animate-bounce-dot" style="animation-delay:0.3s"></div>
         </div>
     </div>
 

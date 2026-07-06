@@ -7,14 +7,11 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                brand: {
-                    DEFAULT: '#57984F',
-                    dark: '#1A1D1A',
-                    light: '#2E669A',
-                },
-                'false-white': '#F0EDE5',
-                'lighter': '#FAF9F5',
-                'blue-accent': '#2E669A',
+                'lotus-dark': '#0A3323',
+                'lotus-moss': '#839958',
+                'lotus-beige': '#F7F4D5',
+                'lotus-rosy': '#D3968C',
+                'lotus-midnight': '#105666',
             },
             spacing: {
                 'phi': '1.618rem',
@@ -31,7 +28,7 @@ module.exports = {
                 'phi-4': ['6.854rem', { lineHeight: '1.1' }],
             },
             fontFamily: {
-                'sans': ['Satoshi', 'system-ui', '-apple-system', 'sans-serif'],
+                'sans': ['Inter', 'Helvetica Neue', 'system-ui', 'sans-serif'],
                 'heading': ['archivo-black', 'system-ui', '-apple-system', 'sans-serif'],
             },
             maxWidth: {

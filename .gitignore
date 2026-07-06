@@ -21,6 +21,12 @@ wheels/
 .DS_Store
 Thumbs.db
 
+# Node / Tailwind
+node_modules/
+
+# Vercel
+.vercel
+
 # Deployment / runtime
 *.pid
 *.log
