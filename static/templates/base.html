@@ -42,6 +42,12 @@
         .shadow-lotus-box {
             box-shadow: 2px 2px 0 #0A3323, 5px 5px 0 rgba(10,51,35,0.4), 0 0 20px rgba(211,150,140,0.3);
         }
+        .filter-lotus-logo {
+            filter: invert(1)
+                drop-shadow(4px 6px 4px rgba(10,51,35,0.3))
+                drop-shadow(8px 14px 12px rgba(10,51,35,0.15))
+                drop-shadow(16px 25px 30px rgba(10,51,35,0.08));
+        }
         @keyframes float-bob {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-6px); }
@@ -165,7 +171,7 @@
     <div class="mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 xl:max-w-[1440px] text-center z-10 relative">
         <h1 class="flex flex-col items-center justify-center">
             <img src="/static/images/logo.svg" alt="Letuch Bakery &amp; Kitchen — Pan artesanal, café y cocina en Mérida"
-                 class="w-[clamp(8rem,30vw,28rem)] h-auto invert opacity-85 drop-shadow-lg">
+                 class="w-[clamp(8rem,30vw,28rem)] h-auto opacity-85 filter-lotus-logo">
             <span class="mt-2 md:mt-4 text-[10px] md:text-xs tracking-[0.35em] text-white/40 font-heading font-light uppercase">
                 Since 2015
             </span>
