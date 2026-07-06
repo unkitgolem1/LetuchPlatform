@@ -42,6 +42,13 @@
         .shadow-lotus-box {
             box-shadow: 2px 2px 0 #0A3323, 5px 5px 0 rgba(10,51,35,0.4), 0 0 20px rgba(211,150,140,0.3);
         }
+        @keyframes float-bob {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        .animate-float {
+            animation: float-bob 1.8s ease-in-out infinite;
+        }
     </style>
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
 
@@ -250,8 +257,25 @@
         </div>
     </nav>
 
-    <div id="content" class="mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 xl:max-w-[1440px] py-phi-3 md:py-phi-4">
+    <div id="content"
+         class="mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 xl:max-w-[1440px] py-phi-3 md:py-phi-4">
         {% block content %}{% endblock %}
+    </div>
+
+    <!-- ─── Burbuja volver a categorías ─── -->
+    <div class="fixed bottom-6 right-6 z-40 animate-float">
+        <a href="#content" onclick="event.preventDefault(); document.getElementById('content').scrollIntoView({behavior:'smooth'}); return false;"
+           class="w-12 h-12 rounded-full
+                  bg-lotus-rosy text-white
+                  shadow-lotus-box
+                  flex items-center justify-center
+                  hover:bg-lotus-dark hover:text-lotus-rosy
+                  transition-all duration-300 active:scale-90"
+           aria-label="Volver a categorías">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/>
+            </svg>
+        </a>
     </div>
 
     <!-- ─── FOOTER ─── -->
