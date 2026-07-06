@@ -1,16 +1,21 @@
 import os
+import sys
 import asyncio
 from contextlib import asynccontextmanager
 from dotenv import load_dotenv
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
-from routes import router
-from database import Database
 from pathlib import Path
 
-load_dotenv()  # Carga .env si existe (no rompe si no está)
-
 BASE_DIR = Path(__file__).resolve().parent.parent
+SRC_DIR = BASE_DIR / "src"
+if str(SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(SRC_DIR))
+
+from routes import router
+from database import Database
+
+load_dotenv()  # Carga .env si existe (no rompe si no está)
 
 
 async def _async_startup():

@@ -3,13 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}LetuchWebSite{% endblock %}</title>
+
+    {% set site_name = "Letuch Bakery & Kitchen" %}
+    {% set default_desc = "Pan artesanal, café de especialidad y cocina de firma en Mérida, Yucatán. Descubre nuestro menú de pan dulce, pan salado, platillos y bebidas." %}
+    {% set default_url = request.url.scheme ~ "://" ~ request.url.netloc %}
+
+    <title>{% block title %}Letuch Bakery & Kitchen{% endblock %} | {{ site_name }}</title>
+    <meta name="description" content="{% block meta_desc %}{{ default_desc }}{% endblock %}">
+    <meta name="keywords" content="panadería Mérida, pan artesanal, café especialidad, Letuch bakery, pan dulce, pan salado, platillos, bebidas, Yucatán">
+    <meta name="author" content="Letuch Bakery & Kitchen">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ default_url }}{{ request.url.path }}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{% block og_title %}{{ self.title() }}{% endblock %}">
+    <meta property="og:description" content="{{ self.meta_desc() }}">
+    <meta property="og:url" content="{{ default_url }}{{ request.url.path }}">
+    <meta property="og:site_name" content="{{ site_name }}">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:image" content="{{ default_url }}/static/images/og-image.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ self.title() }}">
+    <meta name="twitter:description" content="{{ self.meta_desc() }}">
+    <meta name="twitter:image" content="{{ default_url }}/static/images/og-image.jpg">
 
     <link href="{{ url_for('static', path='css/output.css') }}?v=2" rel="stylesheet">
     <script src="https://unpkg.com/htmx.org@2.0.4"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <link rel="stylesheet" href="https://use.typekit.net/fbd7suu.css">
+    <link rel="icon" type="image/svg+xml" href="/static/images/favicon.svg">
 
     <style>
         .text-shadow-lotus {
@@ -20,6 +44,40 @@
         }
     </style>
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Bakery",
+        "@id": "{{ default_url }}",
+        "name": "{{ site_name }}",
+        "description": "{{ default_desc }}",
+        "url": "{{ default_url }}",
+        "telephone": "+529991718947",
+        "email": "letuchbakery@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "53D #195 x 40 y 42, Francisco de Montejo",
+            "addressLocality": "Mérida",
+            "addressRegion": "Yucatán",
+            "postalCode": "97203",
+            "addressCountry": "MX"
+        },
+        "openingHoursSpecification": [
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "14:00"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "17:00", "closes": "20:00"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "14:00"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "", "closes": ""}
+        ],
+        "sameAs": [
+            "https://www.instagram.com/letuchbakery/",
+            "https://www.facebook.com/Letuchbakery/",
+            "https://wa.me/529991718947"
+        ],
+        "servesCuisine": "Mexicana",
+        "priceRange": "$"
+    }
+    </script>
 
     {% block extra_head %}{% endblock %}
 </head>
@@ -98,13 +156,13 @@
     </div>
 
     <div class="mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 xl:max-w-[1440px] text-center z-10 relative">
-        <div class="flex flex-col items-center justify-center">
-            <img src="/static/images/logo.svg" alt="Letuch"
+        <h1 class="flex flex-col items-center justify-center">
+            <img src="/static/images/logo.svg" alt="Letuch Bakery &amp; Kitchen — Pan artesanal, café y cocina en Mérida"
                  class="w-[clamp(8rem,30vw,28rem)] h-auto invert opacity-85 drop-shadow-lg">
             <span class="mt-2 md:mt-4 text-[10px] md:text-xs tracking-[0.35em] text-white/40 font-heading font-light uppercase">
                 Since 2015
             </span>
-        </div>
+        </h1>
 
         <div class="flex flex-col items-center gap-3 mt-4 md:mt-6">
             <div class="animate-bounce">

@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends, Form, HTTPException
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, Response
 from fastapi.templating import Jinja2Templates
 from fastapi.requests import Request
 from pathlib import Path
@@ -306,6 +306,43 @@ async def servir_pedido(
 
 
 # ─── Auth routes ───────────────────────────────────────────
+
+
+@router.get("/robots.txt", response_class=Response)
+async def robots_txt():
+    content = """User-agent: *
+Allow: /
+Sitemap: https://letuchbakery.com/sitemap.xml
+"""
+    return Response(content=content.strip(), media_type="text/plain")
+
+
+@router.get("/sitemap.xml", response_class=Response)
+async def sitemap_xml():
+    content = """<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://letuchbakery.com/</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://letuchbakery.com/section/inicio</loc>
+        <priority>0.9</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://letuchbakery.com/section/servicios</loc>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://letuchbakery.com/section/contacto</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+</urlset>"""
+    return Response(content=content.strip(), media_type="application/xml")
 
 
 @router.get("/auth/login", response_class=HTMLResponse)
